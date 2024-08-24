@@ -41,7 +41,7 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(false);
+    setLoading(true);
     setTimeout(() => {
       setLoading(false);
       console.log("loading Complete");
