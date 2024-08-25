@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   AttentionSeeker,
@@ -49,7 +49,7 @@ const Skills = () => {
             </div>
             <div className="text-right block mx-3 " >{data.level} 
             <div className={`    `} ></div></div>
-            <div className={` my-2  w-[${data.rangeNumber}%]  `}>
+            <div className={` my-2  w-[${data.rangeNumber}%] `}>
               <div
                 className={`range h-3 rounded-full w-[100%]`} 
               ></div>
@@ -61,7 +61,7 @@ const Skills = () => {
       {otherSkills.map((data) => {
         return (
           <div className="w-[80%] ">
-            <div className="mx-5 inline-block relative top-5 ">
+            <div className="mx-5 text-sm inline-block relative top-5 ">
               {data.stack}
             </div>
               <div

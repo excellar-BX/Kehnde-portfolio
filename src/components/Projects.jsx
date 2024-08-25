@@ -1,5 +1,5 @@
 import React from "react";
-import pic from "../assets/palette.png";
+import pic from "../assets/blog5.png";
 import { AttentionSeeker, Bounce, Fade, Flip, Hinge, JackInTheBox, Reveal, Roll, Rotate, Slide, Zoom } from "react-awesome-reveal";
 
 const ProjectsDetails = [
@@ -7,7 +7,7 @@ const ProjectsDetails = [
     image: pic,
     title: "Todo list app",
     description: " Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-    githubLink: "https://github.com/favours123",
+    githubLink: "https://github.com/excellar-BX",
     previewLink: "https://excellenceportfolio2.pages.dev",
     languages: ["ReactJs", "Tailwind"],
   },
@@ -15,7 +15,7 @@ const ProjectsDetails = [
     image: pic,
     title: "Quiz app",
     description: " Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-    githubLink: "https://github.com/favours123",
+    githubLink: "https://github.com/excellar-BX",
     previewLink: "https://excellenceportfolio2.pages.dev",
     languages: ["ReactJs", "Tailwind"],
   },
@@ -23,7 +23,7 @@ const ProjectsDetails = [
     image: pic,
     title: "Nima stores ",
     description: " Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-    githubLink: "https://github.com/favours123",
+    githubLink: "https://github.com/excellar-BX",
     previewLink: "https://excellenceportfolio2.pages.dev",
     languages: ["ReactJs", "Tailwind", "Expressjs", "MongoDB"],
   },
@@ -31,7 +31,7 @@ const ProjectsDetails = [
     image: pic,
     title: "Fitness app",
     description: " Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-    githubLink: "https://github.com/favours123",
+    githubLink: "https://github.com/excellar-BX",
     previewLink: "https://excellenceportfolio2.pages.dev",
     languages: ["ReactJs", "Tailwind"],
   },
@@ -39,7 +39,7 @@ const ProjectsDetails = [
     image: pic,
     title: "Travel companion",
     description: " Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-    githubLink: "https://github.com/favours123",
+    githubLink: "https://github.com/excellar-BX",
     previewLink: "https://excellenceportfolio2.pages.dev",
     languages: ["ReactJs", "Tailwind", "Expressjs", "MongoDB"],
   },
@@ -47,7 +47,7 @@ const ProjectsDetails = [
     image: pic,
     title: "Diet plan app",
     description: " Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-    githubLink: "https://github.com/favours123",
+    githubLink: "https://github.com/excellar-BX",
     previewLink: "https://excellenceportfolio2.pages.dev",
     languages: ["ReactJs", "Tailwind", "Redux"],
   },
@@ -65,7 +65,7 @@ const Projects = () => {
             <div className=" m-4 w-[250px] mx-auto h-[300px] border-[#f49504] border-[3px] rounded-xl px-2 py-3 ">
               <div>
                 <img
-                  className=" w-[210px] h-[100px] my-2 rounded-sm mx-auto "
+                  className=" w-[210px] h-[100px] my-2 rounded-lg mx-auto "
                   src={data.image}
                   alt={data.title}
                 />

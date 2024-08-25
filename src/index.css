@@ -1,44 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:wght@200&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:wght@200&display=swap"); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Montserrat";
+    src: url(./Fonts/Montserrat-Regular.ttf)
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
   /* font-family: 'Montserrat', sans-serif; */
-  font-family: "Montserrat",  sans-serif;
 }
 .cv-button{
   background: linear-gradient(90deg, #ffcc80, #fee1b5) ;
-  padding: 10px 20px;
-  width: 200px;
   text-align: center;
-  height: 50px;
 }
 .indicator::before {
   content: '';
-  margin: 0px 40px;
-  display: flex;
   box-shadow: #ffb700 0px 0px 20px;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50px;
-  background: #f49504;
 }
 .indicator::after {
   content: '';
-  margin: 0px auto;
-  display: flex;
-  justify-content: center;
-  width: 3px;
-  height: 100%;
-  border-radius: 50px;
-  background: #f49504;
-}
-.indicator{
-  
-  height: 100%;
 }
 .range{
   background: linear-gradient(90deg, #ff7b00, #ffcc80);

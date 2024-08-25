@@ -16,7 +16,6 @@ import {
 } from "react-icons/bi";
 import { Link } from "react-scroll";
 import { Fade } from "react-awesome-reveal";
-import { data } from "autoprefixer";
 
 const themeInfo = [
   {

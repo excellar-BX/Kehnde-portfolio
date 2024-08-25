@@ -18,9 +18,9 @@ const About = () => {
       </div>
       <div className=" w-[50%] max-lg:w-[100%] " >
         <Fade direction="up" cascade triggerOnce={true} damping={0.1} duration={3000} >
-        <div className="text-7xl relative top-[20%] text-[#f49504] font-bold " >About me</div>
-        <div className="relative top-[20%] text-black font-extrabold my-2 dark:text-[#eeeeee] ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat natus nostrum, tempore est minus ad suscipit nobis labore magnam explicabo cumque sunt necessitatibus eaque omnis provident deserunt amet repellat. Perferendis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio eaque placeat vitae nisi? Eveniet mollitia dignissimos eum modi obcaecati voluptatibus voluptatem qui, porro nihil? Nihil saepe architecto cum autem earum. </div>
-        <div className="cv-button dark:text-[#1e1e1e] relative top-[20%] font-semibold rounded-full border-2 text-extrabold  border-[#f9bd64] dark:border-white my-10 ">
+        <div className="sm:text-7xl text-5xl my-4  relative top-[20%] text-[#f49504] font-bold " >About me</div>
+        <div className="relative text-sm  sm:text-lg top-[20%] text-black font-extrabold my-2 dark:text-[#eeeeee] ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat natus nostrum, tempore est minus ad suscipit nobis labore magnam explicabo cumque sunt necessitatibus eaque omnis provident deserunt amet repellat. Perferendis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio eaque placeat vitae nisi? Eveniet mollitia dignissimos eum modi obcaecati voluptatibus voluptatem qui, porro nihil? Nihil saepe architecto cum autem earum. </div>
+        <div className="cv-button text-sm sm:text-lg dark:text-[#1e1e1e] relative top-[20%] font-semibold rounded-full border-2 text-extrabold  border-[#f9bd64] dark:border-white my-6 sm:my-10 px-[10px] sm:px-[20px] w-[150px] sm:w-[200px] sm:h-[50px] h-[40px] py-[6px] sm:py-[10px] ">
           <a href={Resume} download>Download CV</a>
         </div>
         </Fade>

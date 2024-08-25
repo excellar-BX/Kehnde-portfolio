@@ -51,13 +51,13 @@ function App() {
   return loading ? (
     <div className="bg-[#100315] h-screen bg-fixed flex max-lg:flex-col max-md:flex-col " >
       <img src={pic} className="w-[50%] mx-auto max-lg:w-auto  " alt="boy" />
-    <div className="absolute left-[50%] top-[40%]" >
+    <div className="absolute left-[46%] bottom-[3%] sm:top-[40%]" >
       <h1><PuffLoader color="#ffffff"  className=" mt-[45%] " /></h1>
     </div>
-      <p className="info-text text-white text-4xl h-32 w-fit mx-auto  bg-[#4f0469] p-12 rounded-full ">{"Welcome to my portfolio </> "}</p></div>
+      <p className="info-text text-white text-4xl h-fit w-fit mx-auto  bg-[#4f0469] p-12 rounded-full ">{"Welcome to my portfolio </> "}</p></div>
 
   ) : (
-    <div className="App dark:selection:text-[#39064e]   dark:selection:bg-white selection:text-white selection:bg-[#39064e]  dark:bg-[#241b28] dark:text-[#c3c1c1] ">
+    <div className="App font-Montserrat dark:selection:text-[#39064e]   dark:selection:bg-white selection:text-white selection:bg-[#39064e]  dark:bg-[#241b28] dark:text-[#c3c1c1] ">
       <div
         id="toTopBtn" 
         className={`w-12 h-12 hidden bg-[#39064e] rounded-full fixed bottom-10 right-10 `}

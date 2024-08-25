@@ -4,8 +4,8 @@ import { BiEnvelope, BiHeart, BiLogoDiscord, BiLogoDiscordAlt, BiLogoFacebook, B
 
 const Footer = () => {
   return (
-    <div className="min-[768px]:mx-[250px] sm:p-0 p-6  mx-auto  " id="blog">
-      <div className="text-7xl font-bold text-[#f49504] pb-4  ">
+    <div className="sm:mx-[250px] sm:p-0 p-6  mx-auto  " id="blog">
+      <div className="sm:text-7xl text-5xl font-bold text-[#f49504] pb-4  ">
         Connect With Me
       </div>
       <form className="" action="">
@@ -36,38 +36,41 @@ const Footer = () => {
           ></textarea>
         </div>
       </form>
-      <div className="flex flex-row"  >
-        <div className=" flex flex-row py-10 " >
-        <BiSolidEnvelope className="w-10 h-10 mx-1 " />
-        <a className="text-lg mx-2 pt-2 " href="mailto:excellenceay33@gmail.com">excellenceay33@gmail.com</a>
+      <div className="flex flex-col sm:flex-row"  >
+      <a className="text-lg mx-2 pt-2 " href="mailto:excellenceay33@gmail.com">
+        <div className=" flex flex-col sm:flex-row py-10 " >
+          
+        <BiSolidEnvelope className="w-10 h-10  mx-1 text-[#878787] hover:text-[#f49504] dark:hover:text-[#eeeeee] " />
+        <p className="text-lg  mx-2 pt-2" >excellenceay33@gmail.com</p>
         </div>
-        <div className="grid grid-cols-3 gap-4 text-[#878787] relative left-[40%] py-6 " >
+        </a>
+        <div className="grid grid-cols-3 gap-4 text-[#878787] relative left-0  sm:left-[40%]  sm:py-6 " >
           <a href="#">
-        <BiLogoDiscordAlt className="w-10 h-10 mx-1 hover:text-[#eeeeee] " />
+        <BiLogoDiscordAlt className="w-10 h-10 mx-1 hover:text-[#f49504] dark:hover:text-[#eeeeee] " />
         </a>
           <a href="https://www.linkedin.com/in/excellence-favours-98bbb3228">
-        <BiLogoLinkedin className="w-10 h-10 mx-1 hover:text-[#eeeeee] " />
+        <BiLogoLinkedin className="w-10 h-10 mx-1 hover:text-[#f49504] dark:hover:text-[#eeeeee] " />
         </a>
           <a href="https://twitter.com/ExcellenceAy">
-        <BiLogoTwitter className="w-10 h-10 mx-1 hover:text-[#eeeeee] " />
+        <BiLogoTwitter className="w-10 h-10 mx-1 hover:text-[#f49504] dark:hover:text-[#eeeeee] " />
         </a>
           <a href="https://instagram.com/exxcell_encxxy">
-        <BiLogoInstagram className="w-10 h-10 mx-1 hover:text-[#eeeeee] " />
+        <BiLogoInstagram className="w-10 h-10 mx-1 hover:text-[#f49504] dark:hover:text-[#eeeeee] " />
         </a>
           <a href="https://www.facebook.com/profile.php?id=100071525263561">
-        <BiLogoFacebook className="w-10 h-10 mx-1 hover:text-[#eeeeee]  " />
+        <BiLogoFacebook className="w-10 h-10 mx-1 hover:text-[#f49504] dark:hover:text-[#eeeeee]  " />
         </a>
           <a href="https://www.upwork.com/freelancers/~091ea1fc675945dc5f">
-        <BiLogoUpwork className="w-10 h-10 mx-1 hover:text-[#eeeeee] " />
+        <BiLogoUpwork className="w-10 h-10 mx-1 hover:text-[#f49504] dark:hover:text-[#eeeeee] " />
         </a>
           <a href="https://wa.me/+2347015388599">
-        <BiLogoWhatsapp className="w-10 h-10 mx-1 hover:text-[#eeeeee] " />
+        <BiLogoWhatsapp className="w-10 h-10 mx-1 hover:text-[#f49504] dark:hover:text-[#eeeeee] " />
         </a>
           <a href="https://www.youtube.com/@excellenceay">
-        <BiLogoYoutube className="w-10 h-10 mx-1 hover:text-[#eeeeee] " />
+        <BiLogoYoutube className="w-10 h-10 mx-1 hover:text-[#f49504] dark:hover:text-[#eeeeee] " />
         </a>
           <a href="https://github.com/excellar-BX">
-        <BiLogoGithub className="w-10 h-10 mx-1 hover:text-[#eeeeee] " />
+        <BiLogoGithub className="w-10 h-10 mx-1 hover:text-[#f49504] dark:hover:text-[#eeeeee] " />
         </a>
         </div>
       </div>
