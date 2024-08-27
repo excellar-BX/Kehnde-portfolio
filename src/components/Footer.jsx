@@ -4,7 +4,7 @@ import { BiEnvelope, BiHeart, BiLogoDiscord, BiLogoDiscordAlt, BiLogoFacebook, B
 
 const Footer = () => {
   return (
-    <div className="min-[850px]:mx-[250px] sm:p-0 p-6  mx-auto  " id="blog">
+    <div className="min-[850px]:mx-[150px] sm:p-0 p-6  mx-auto  " id="blog">
       <div className="sm:text-7xl min-[700px]:ml-6 text-5xl font-bold text-[#f49504] pb-4  ">
         Connect With Me
       </div>
@@ -36,8 +36,8 @@ const Footer = () => {
           ></textarea>
         </div>
       </form>
-      <div className="flex flex-col sm:flex-row"  >
-      <a className="text-lg mx-2 pt-2 " href="mailto:excellenceay33@gmail.com">
+      <div className="flex flex-col justify-start sm:flex-row"  >
+      <a className="text-lg  mx-2 pt-2 " href="mailto:excellenceay33@gmail.com">
         <div className=" flex flex-col sm:flex-row py-10 " >
           
         <BiSolidEnvelope className="w-10 h-10  mx-1 text-[#878787] hover:text-[#f49504] dark:hover:text-[#eeeeee] " />

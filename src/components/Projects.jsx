@@ -55,7 +55,7 @@ const ProjectsDetails = [
 
 const Projects = () => {
   return (
-    <div className="min-[850px]:mx-[250px] sm:p-0 p-6 mx-auto my-20 " id="projects">
+    <div className="min-[850px]:mx-[150px] sm:p-0 p-6 mx-auto my-20 " id="projects">
       <div className="text-5xl font-bold text-[#f49504] my-10 min-[700px]:ml-6 "> Projects</div>
       <div className=" grid sm:grid-cols-2  grid-cols-1 mx-auto max-w-xl ">
       <Fade direction="up" cascade triggerOnce={true} duration={3000} damping={0.1}>

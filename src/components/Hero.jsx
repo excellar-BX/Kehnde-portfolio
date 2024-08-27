@@ -82,7 +82,7 @@ const Hero = () => {
         </ul>
       </div>
 
-      <div className=" flex flex-row max-[850px]:flex-col ">
+      <div className=" flex flex-row max-[1024px]:flex-col ">
         <div className=" w-[70%] min-w-[300px] m-20 max-[500px]:mx-3">
           <Fade cascade damping={0.2} direction="left" triggerOnce={true}>
             <div>
@@ -105,7 +105,7 @@ const Hero = () => {
                       1000,
                       "Gospel Keyboardist",
                       1000,
-                      "Lifestyle Coach",
+                      "Coach",
                       1000,
                       "Computer Scientist",
                       1000,
@@ -141,7 +141,7 @@ const Hero = () => {
           <div className="buttons mt-10 flex ">
             <Fade direction="left" triggerOnce={true} delay={1000}>
               <div>
-                <a href="#">
+              <a href="https://www.linkedin.com/in/excellence-favours-98bbb3228">
                   <span className="max-[460px]:border-1 border-2 border-[#f49504] hover:bg-[#f49504] hover:text-white rounded max-[460px]:px-6 px-10 max-[460px]:py-2 py-3 max-[460px]:text-sm text-[#ffbc26] mx-2 max-[460px]:font-[3px]  ">
                     Hire me
                   </span>
@@ -150,11 +150,16 @@ const Hero = () => {
             </Fade>
             <Fade direction="right" triggerOnce={true} delay={1000}>
               <div>
-                <a href="#">
+                <Link 
+                className=""
+                activeClass="active"
+                smooth={true}
+                spy={true}
+                 to="about" >
                   <span className="max-[460px]:border-1 hover:border-2 hover:border-[#f49504] max-[460px]:px-6 rounded px-8 max-[460px]:py-2 py-3 text-[#f49504] max-[460px]:font-[3px] ">
                     About me
                   </span>
-                </a>
+                  </Link>
               </div>
             </Fade>
           </div>

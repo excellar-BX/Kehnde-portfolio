@@ -36,7 +36,7 @@ const Resume = () => {
     },
   ];
   return (
-    <div className="min-[850px]:mx-[250px] min-[700px]:mx-6 ">
+    <div className="min-[850px]:mx-[150px] min-[700px]:mx-6 ">
       <div className="text-[#f49504] sm:text-7xl text-5xl font-bold m-10">Resume</div>
       <div className="resume">
         {data.map((data, index) => {
