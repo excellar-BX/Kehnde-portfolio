@@ -4,9 +4,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      poppins: ["Poppins"],
+      Poppins: "Poppins",
       courier: ["Courier"],
-      Montserrat: ["Montserrat"],
+      Montserrat: "Montserrat",
     },
     colors: {
       primary: "#6da5c0",

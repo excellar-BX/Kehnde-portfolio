@@ -12,7 +12,7 @@ const About = () => {
   ];
   return (
          
-    <div id="about" className=" flex my-20 flex-row max-lg:flex-col min-[768px]:mx-[250px] mx-4 " >
+    <div id="about" className=" flex my-20 flex-row max-lg:flex-col min-[850px]:mx-[250px] mx-4 " >
       <div className="w-[50%] max-lg:w-[100%] " >
         <img src={pic} alt="me" />
       </div>

@@ -82,7 +82,7 @@ const Hero = () => {
         </ul>
       </div>
 
-      <div className=" flex flex-row max-[800px]:flex-col ">
+      <div className=" flex flex-row max-[850px]:flex-col ">
         <div className=" w-[70%] min-w-[300px] m-20 max-[500px]:mx-3">
           <Fade cascade damping={0.2} direction="left" triggerOnce={true}>
             <div>

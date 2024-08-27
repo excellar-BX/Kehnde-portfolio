@@ -36,7 +36,7 @@ const Resume = () => {
     },
   ];
   return (
-    <div className="min-[768px]:mx-[250px] ">
+    <div className="min-[850px]:mx-[250px] min-[700px]:mx-6 ">
       <div className="text-[#f49504] sm:text-7xl text-5xl font-bold m-10">Resume</div>
       <div className="resume">
         {data.map((data, index) => {
@@ -45,18 +45,18 @@ const Resume = () => {
               <div className=" flex-row sm:mx-0 mr-2 flex">
                 <Fade direction="down" cascade damping={0.05} duration={2000} triggerOnce >
                   <div className=" font-semibold rounded-s-full scale-75 sm:scale-100  bg-[#7c7c7c] sm:m-0 ml-1 pl-4 inline-flex py-0.5  h-[29px] ">
-                    <p className="text-xl">{data.year}</p>
+                    <p className="text-xl ">{data.year}</p>
                     <div className="text-[#7c7c7c] text-[34px] bottom-1 left-[26px] relative rounded ">
                       <BiSolidRightArrow />
-                    </div>
+                    </div> 
                   </div>
                 </Fade>
-                <Fade duration={2000} direction="down" cascade triggerOnce damping={0.05} >
+                <div >
                   <div className="indicator before:scale-75 sm:before:scale-100 sm:before:mx-[40px] before:mx-[10px] before:flex before:justify-center before:w-[30px] before:h-[30px] before:rounded-full before:bg-[#f49504]
                   after:mx-auto after:flex after:justify-center after:w-[3px] after:h-full after:bottom-2 after:relative after:rounded-e-full after:bg-[#f49504] 
                   h-full
                   "></div>
-                </Fade>
+                </div>
                 <div>
                   <Fade duration={2000} direction="up" cascade triggerOnce damping={0.2} >
                     <div className="sm:text-3xl text-2xl sm:my-2 my-1  font-bold">{data.post}</div>

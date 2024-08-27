@@ -4,8 +4,8 @@ import { BiEnvelope, BiHeart, BiLogoDiscord, BiLogoDiscordAlt, BiLogoFacebook, B
 
 const Footer = () => {
   return (
-    <div className="sm:mx-[250px] sm:p-0 p-6  mx-auto  " id="blog">
-      <div className="sm:text-7xl text-5xl font-bold text-[#f49504] pb-4  ">
+    <div className="min-[850px]:mx-[250px] sm:p-0 p-6  mx-auto  " id="blog">
+      <div className="sm:text-7xl min-[700px]:ml-6 text-5xl font-bold text-[#f49504] pb-4  ">
         Connect With Me
       </div>
       <form className="" action="">
@@ -28,7 +28,7 @@ const Footer = () => {
             Message*
           </label>
           <textarea
-            className=" w-[100%] mx-auto h-60 bg-opacity-10 bg-[#c339ff] rounded-xl "
+            className=" max-h-[300px] w-[100%] mx-auto h-60 bg-opacity-10 bg-[#c339ff] rounded-xl "
             name=""
             id=""
             cols="30"
@@ -44,7 +44,7 @@ const Footer = () => {
         <p className="text-lg  mx-2 pt-2" >excellenceay33@gmail.com</p>
         </div>
         </a>
-        <div className="grid grid-cols-3 gap-4 text-[#878787] relative left-0  sm:left-[40%]  sm:py-6 " >
+        <div className="grid grid-cols-3 gap-4 text-[#878787] relative right-6 sm:left-[40%]  sm:py-6 " >
           <a href="#">
         <BiLogoDiscordAlt className="w-10 h-10 mx-1 hover:text-[#f49504] dark:hover:text-[#eeeeee] " />
         </a>
