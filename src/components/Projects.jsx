@@ -6,7 +6,7 @@ const ProjectsDetails = [
   {
     image: pic,
     title: "Todo list app",
-    description: " Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Simple task management tool for organizing and tracking daily tasks.",
     githubLink: "https://github.com/excellar-BX",
     previewLink: "https://excellenceportfolio2.pages.dev",
     languages: ["ReactJs", "Tailwind"],
@@ -14,7 +14,7 @@ const ProjectsDetails = [
   {
     image: pic,
     title: "Quiz app",
-    description: " Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Interactive quiz platform for testing knowledge and learning new concepts.",
     githubLink: "https://github.com/excellar-BX",
     previewLink: "https://excellenceportfolio2.pages.dev",
     languages: ["ReactJs", "Tailwind"],
@@ -22,7 +22,7 @@ const ProjectsDetails = [
   {
     image: pic,
     title: "Nima stores ",
-    description: " Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Online shopping platform for discovering and purchasing products.",
     githubLink: "https://github.com/excellar-BX",
     previewLink: "https://excellenceportfolio2.pages.dev",
     languages: ["ReactJs", "Tailwind", "Expressjs", "MongoDB"],
@@ -30,7 +30,7 @@ const ProjectsDetails = [
   {
     image: pic,
     title: "Fitness app",
-    description: " Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Personalized fitness tracker for monitoring progress and achieving goals.",
     githubLink: "https://github.com/excellar-BX",
     previewLink: "https://excellenceportfolio2.pages.dev",
     languages: ["ReactJs", "Tailwind"],
@@ -38,7 +38,7 @@ const ProjectsDetails = [
   {
     image: pic,
     title: "Travel companion",
-    description: " Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Travel guide and planning tool for exploring new destinations.",
     githubLink: "https://github.com/excellar-BX",
     previewLink: "https://excellenceportfolio2.pages.dev",
     languages: ["ReactJs", "Tailwind", "Expressjs", "MongoDB"],
@@ -46,7 +46,7 @@ const ProjectsDetails = [
   {
     image: pic,
     title: "Diet plan app",
-    description: " Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    description: " Customizable nutrition planning tool for healthy eating and weight management.",
     githubLink: "https://github.com/excellar-BX",
     previewLink: "https://excellenceportfolio2.pages.dev",
     languages: ["ReactJs", "Tailwind", "Redux"],

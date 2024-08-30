@@ -26,7 +26,6 @@ import {
 } from "react-awesome-reveal";
 import { TypeAnimation } from "react-type-animation";
 const Hero = () => {
-  
   const Nav = [
     {
       name: "About",
@@ -125,15 +124,8 @@ const Hero = () => {
                 </span>
               </span>
             </div>
-            <div className="w-[90%] m-3 overflow-y-hidden h-24 text-sm max-[460px]:text-[12px] text-white ">
-              <span className=" ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Necessitatibus, consequatur? Dolores amet aspernatur suscipit
-                deserunt .libero. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Aliquam, doloremque at, delectus quod commodi
-                autem, distinctio repellendus esse error voluptatum praesentium
-                ullam facere assumenda. Asperiores beatae totam unde explicabo
-                sapiente.
+            <div className="w-[90%] m-3 overflow-y-hidden  text-sm max-[460px]:text-[12px] text-white ">
+              <span className=" ">As a seasoned frontend web and mobile developer, I specialize in React JS, Tailwind CSS, and React Native, delivering high-quality, responsive, and scalable solutions. Passionate about cutting-edge technologies, I create exceptional user experiences and excel in collaborative environments, staying current with industry trends to craft impactful digital experiences.
               </span>
             </div>
           </Fade>
@@ -141,7 +133,7 @@ const Hero = () => {
           <div className="buttons mt-10 flex ">
             <Fade direction="left" triggerOnce={true} delay={1000}>
               <div>
-              <a href="https://www.linkedin.com/in/excellence-favours-98bbb3228">
+                <a href="https://www.linkedin.com/in/excellence-favours-98bbb3228">
                   <span className="max-[460px]:border-1 border-2 border-[#f49504] hover:bg-[#f49504] hover:text-white rounded max-[460px]:px-6 px-10 max-[460px]:py-2 py-3 max-[460px]:text-sm text-[#ffbc26] mx-2 max-[460px]:font-[3px]  ">
                     Hire me
                   </span>
@@ -150,16 +142,17 @@ const Hero = () => {
             </Fade>
             <Fade direction="right" triggerOnce={true} delay={1000}>
               <div>
-                <Link 
-                className=""
-                activeClass="active"
-                smooth={true}
-                spy={true}
-                 to="about" >
+                <Link
+                  className=""
+                  activeClass="active"
+                  smooth={true}
+                  spy={true}
+                  to="about"
+                >
                   <span className="max-[460px]:border-1 hover:border-2 hover:border-[#f49504] max-[460px]:px-6 rounded px-8 max-[460px]:py-2 py-3 text-[#f49504] max-[460px]:font-[3px] ">
                     About me
                   </span>
-                  </Link>
+                </Link>
               </div>
             </Fade>
           </div>
