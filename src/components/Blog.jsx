@@ -48,6 +48,7 @@ const Stories = [
   },
 ];
 
+
 const Blog = () => {
   return (
     <div className="min-[850px]:mx-[150px] sm:p-0 p-6 md:mx-6 mx-auto my-20 " id="blog">
@@ -56,7 +57,7 @@ const Blog = () => {
       <div className="grid sm:grid-cols-2 grid-cols-1 ">
         {Stories.map((data, index) => {
           return (
-            <div key={index} className="mx-auto mx-auto max-w-xl sm:w-[300px] sm:mx-0 mx-auto ">
+            <div key={index} className=" max-w-xl sm:w-[300px] sm:mx-0 mx-auto ">
               <div>
                 <img
                   src={data.image}

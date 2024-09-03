@@ -75,6 +75,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center py-10 w-[100%] " >Made With ❤ By <a href="https://github.com/excellar-BX" className=" underline " >Excellence</a> </div>
+      <div> </div>
     </div>
   );
 };
