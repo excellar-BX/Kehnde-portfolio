@@ -18,7 +18,7 @@ const About = () => {
         My expertise spans building dynamic web applications, mobile apps, and responsive interfaces that adapt to any device or screen size. I am dedicated to writing clean, efficient, and well-documented code that meets the highest standards of quality and performance.
         Whether it's developing complex web applications, optimizing user interfaces, or troubleshooting issues, I approach each project with a solutions-focused mindset and a commitment to delivering exceptional results. With a keen eye for detail and a passion for innovation, I am always looking for new ways to push the boundaries of what is possible in the world of frontend development. </div>
         <div className="cv-button text-sm sm:text-lg dark:text-[#1e1e1e] relative top-[20%] font-semibold rounded-full border-2 text-extrabold  border-[#f9bd64] dark:border-white my-6 sm:my-10 px-[10px] sm:px-[20px] w-[150px] sm:w-[200px] sm:h-[50px] h-[40px] py-[6px] sm:py-[10px] ">
-          <a href={Resume} download>Download CV</a>
+          <a href={Resume} download>Download CV</a> 
         </div>
         </Fade>
       </div>

@@ -54,7 +54,7 @@ const Skills = () => {
               <div className={`    `}></div>
             </div>
             <div className={` my-2  w-[${data.rangeNumber}%] `}>
-              <div className={`range h-3 rounded-full w-[100%]`}></div>
+              <div className={`range hover:animate-pulse h-3 rounded-full w-[100%]`}></div>
             </div>
           </div>
         );
@@ -62,33 +62,33 @@ const Skills = () => {
 <div>
   
 <div className="w-[80%]">
-        <div className="mx-3 inline-block relative top-5 ">React Js</div>
+        <div className="mx-3 inline-block relative top-5  ">React Js</div>
         <div className="text-right block mx-3 ">
           Intermediate
           <div className={`    `}></div>
         </div>
         <div className={` my-2  w-[60%] `}>
-          <div className={`range h-3 rounded-full w-[100%]`}></div>
+          <div className={`range h-3 rounded-full w-[100%] hover:animate-pulse `}></div>
         </div>
       </div>
 <div className="w-[80%]">
-        <div className="mx-3 inline-block relative top-5 ">React Native</div>
+        <div className="mx-3 inline-block relative top-5  ">React Native</div>
         <div className="text-right block mx-3 ">
         Beginner
           <div className={`    `}></div>
         </div>
         <div className={` my-2  w-[30%] `}>
-          <div className={`range h-3 rounded-full w-[100%]`}></div>
+          <div className={`range h-3 rounded-full w-[100%] hover:animate-pulse `}></div>
         </div>
       </div>
 <div className="w-[80%]">
-        <div className="mx-3 inline-block relative top-5 ">Mongo DB</div>
+        <div className="mx-3 inline-block relative top-5  ">Mongo DB</div>
         <div className="text-right block mx-3 ">
           Intermediate
           <div className={`    `}></div>
         </div>
         <div className={` my-2  w-[60%] `}>
-          <div className={`range h-3 rounded-full w-[100%]`}></div>
+          <div className={`range h-3 rounded-full w-[100%] hover:animate-pulse `}></div>
         </div>
       </div>
 </div>

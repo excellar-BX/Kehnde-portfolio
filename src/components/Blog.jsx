@@ -51,13 +51,15 @@ const Stories = [
 
 const Blog = () => {
   return (
-    <div className="min-[850px]:mx-[150px] sm:p-0 p-6 md:mx-6 mx-auto my-20 " id="blog">
+    <div className="min-[850px]:mx-[100px] sm:p-0 p-6 md:mx-6 mx-auto my-20 " id="blog">
       <div className="text-5xl font-bold text-[#f49504] my-10 ">My Blog</div>
 
-      <div className="grid sm:grid-cols-2 grid-cols-1 ">
+      <Fade direction="up" cascade triggerOnce={true} delay={1000} duration={3000} damping={0.1}>
+      <div className="grid sm:grid-cols-2 gap-y-3 max-w-[900px] mx-auto grid-cols-1 ">
         {Stories.map((data, index) => {
-          return (
+          return ( 
             <div key={index} className=" max-w-xl sm:w-[300px] sm:mx-0 mx-auto ">
+            <Fade direction="up" cascade triggerOnce={true} delay={1000} duration={3000} damping={0.1}>
               <div>
                 <img
                   src={data.image}
@@ -65,15 +67,21 @@ const Blog = () => {
                   alt={data.title}
                 />
               </div>
+      </Fade>
+              <Fade direction="up" cascade triggerOnce={true} delay={1000} duration={3000} damping={0.1}>
               <div className="font-extrabold text-xl w-full my-2 "  >{data.title}</div>
               <div className="text-xs my-2 " >{data.description}</div>
+              <Fade direction="right" cascade triggerOnce={true} delay={1000} duration={3000} damping={0.1}>
               <a className="text-sm my-4 text-[#f49504]  " href={data.Link}>
                 <div>{"Read more >>"}</div>
               </a>
+              </Fade>
+            </Fade>
             </div>
           );
         })}
       </div>
+      </Fade>
     </div>
   );
 };
