@@ -25,6 +25,7 @@ import {
   Zoom,
 } from "react-awesome-reveal";
 import { TypeAnimation } from "react-type-animation";
+import CountUp from "react-countup";
 const Hero = () => {
   const Nav = [
     {
@@ -55,115 +56,127 @@ const Hero = () => {
   ];
 
   return (
-    <div className=" bg-[#100315]">
-      <Header />
-      <div className="blueShape bg-white absolute w-[320px]  h-[320px] left-1 blur-[400px]    rounded-full "></div>
-      <div className="blueShape bg-white absolute w-[250px]  h-[250px] right-1 bottom-[20%] blur-[180px]   rounded-full "></div>
+   <div> <div className=" bg-blue-stone-800 pb-20 ">
+   <Header />
+   <div className="blueShape hidden sm:block bg-white absolute w-[320px]  h-[320px] left-1 blur-[400px]    rounded-full "></div>
+   <div className="blueShape hidden sm:block bg-white absolute w-[250px]  h-[250px] right-1 bottom-[20%] blur-[180px]   rounded-full "></div>
 
-      <div className=" w-[60px] right-0 fixed z-10 top-20  max-[800px]:top-16 ">
-        <ul className="flex flex-col opacity-40 hover:opacity-100  ">
-          <Fade direction="down" cascade triggerOnce={true} damping={0.1}>
-            {Nav.map((nav, index) => (
-              <Link
-                className=""
-                activeClass="active"
-                smooth={true}
-                spy={true}
-                key={index}
-                to={nav.route}
-              >
-                <div className="text-[#707070] m-4 nav-icons text-2xl hover:text-[#f49504] hover:-translate-x-2  transition-all duration-2s delay-1s ease-out   ">
-                  {nav.icon}
-                </div>
-              </Link>
-            ))}
-          </Fade>
-        </ul>
-      </div>
+   <div className=" w-[60px] right-0 fixed z-10 top-20  max-[800px]:top-16 ">
+     <ul className="flex flex-col opacity-60 hover:opacity-100  ">
+       <Fade direction="down" cascade triggerOnce={true} damping={0.1}>
+         {Nav.map((nav, index) => (
+           <Link
+             className=""
+             activeClass="active"
+             smooth={true}
+             spy={true}
+             key={index}
+             to={nav.route}
+           >
+             <div className="text-[#707070] m-4 nav-icons text-2xl hover:text-web-orange-500 hover:-translate-x-2  transition-all duration-2s delay-1s ease-out   ">
+               {nav.icon}
+             </div>
+           </Link>
+         ))}
+       </Fade>
+     </ul>
+   </div>
 
-      <div className=" flex flex-row max-[1024px]:flex-col ">
-        <div className=" w-[70%] min-w-[300px] m-20 max-[500px]:mx-3">
-          <Fade cascade damping={0.2} direction="left" triggerOnce={true}>
-            <div>
-              <p className="text-white text-xl max-[460px]:text-sm mx-2 my-5 ">
-                Hello I'm
-              </p>
-            </div>
-            <div>
-              <p className=" text-8xl mx-6 my-5 font-thin text-[#f49504] max-[460px]:text-6xl ">
-                Kehnde
-              </p>
-            </div>
-            <div className=" my-5 ">
-              <span className="text-white text-2xl max-[460px]:text-xl mx-4">
-                a
-                <span className="text-white text-4xl max-[460px]:text-3xl ">
-                  <TypeAnimation
-                    sequence={[
-                      "Frontend Web Developer",
-                      1000,
-                      "Gospel Keyboardist",
-                      1000,
-                      "Coach",
-                      1000,
-                      "Computer Scientist",
-                      1000,
-                      "Backend Enthusiast",
-                      1000,
-                      "Believer",
-                      1000,
-                      "Lia's Paddy",
-                      1000,
-                    ]}
-                    wrapper="span"
-                    speed={10}
-                    deletionSpeed={10}
-                    repeat={Infinity}
-                    style={{ marginLeft: "10px" }}
-                  />
-                </span>
-              </span>
-            </div>
-            <div className="w-[90%] m-3 overflow-y-hidden  text-sm max-[460px]:text-[12px] text-white ">
-              <span className=" ">As a seasoned frontend web and mobile developer, I specialize in React JS, Tailwind CSS, and React Native, delivering high-quality, responsive, and scalable solutions. Passionate about cutting-edge technologies, I create exceptional user experiences and excel in collaborative environments, staying current with industry trends to craft impactful digital experiences.
-              </span>
-            </div>
-          </Fade>
+   <div className=" flex flex-row max-[1024px]:flex-col ">
+     <div className=" w-[70%] min-w-[300px] m-20 max-[500px]:mx-3">
+       <Fade cascade damping={0.2} direction="left" triggerOnce={true}>
+         <div>
+           <p className="text-white text-xl max-[460px]:text-sm mx-2 my-5 ">
+             Hello I'm
+           </p>
+         </div>
+         <div>
+           <p className=" text-8xl mx-6 my-5 font-thin text-web-orange-500 max-[460px]:text-6xl ">
+             Kehnde
+           </p>
+         </div>
+         <div className=" my-5 ">
+           <span className="text-white text-2xl max-[460px]:text-xl mx-4">
+             a
+             <span className="text-white text-4xl max-[460px]:text-3xl ">
+               <TypeAnimation
+                 sequence={[
+                   "Frontend Web Developer",
+                   1000,
+                   "Gospel Keyboardist",
+                   1000,
+                   "Coach",
+                   1000,
+                   "Computer Scientist",
+                   1000,
+                   "Backend Enthusiast",
+                   1000,
+                   "Believer",
+                   1000,
+                   "Lia's Paddy",
+                   1000,
+                 ]}
+                 wrapper="span"
+                 speed={10}
+                 deletionSpeed={10}
+                 repeat={Infinity}
+                 style={{ marginLeft: "10px" }}
+               />
+             </span>
+           </span>
+         </div>
+         <div className="w-[90%] m-3 overflow-y-hidden  text-sm max-[460px]:text-[12px] text-white ">
+           <span className=" ">As a seasoned frontend web and mobile developer, I specialize in React JS, Tailwind CSS, and React Native, delivering high-quality, responsive, and scalable solutions. Passionate about cutting-edge technologies, I create exceptional user experiences and excel in collaborative environments, staying current with industry trends to craft impactful digital experiences.
+           </span>
+         </div>
+       </Fade>
 
-          <div className="buttons mt-10 flex ">
-            <Fade direction="left" triggerOnce={true} delay={1000}>
-              <div>
-                <a href="https://www.linkedin.com/in/excellence-favours-98bbb3228">
-                  <span className="max-[460px]:border-1 border-2 border-[#f49504] hover:bg-[#f49504] hover:text-white rounded max-[460px]:px-6 px-10 max-[460px]:py-2 py-3 max-[460px]:text-sm text-[#ffbc26] mx-2 max-[460px]:font-[3px]  ">
-                    Hire me
-                  </span>
-                </a>
-              </div>
-            </Fade>
-            <Fade direction="right" triggerOnce={true} delay={1000}>
-              <div>
-                <Link
-                  className=""
-                  activeClass="active"
-                  smooth={true}
-                  spy={true}
-                  to="about"
-                >
-                  <span className="max-[460px]:border-1 hover:border-2 hover:border-[#f49504] max-[460px]:px-6 rounded px-8 max-[460px]:py-2 py-3 text-[#f49504] max-[460px]:font-[3px] ">
-                    About me
-                  </span>
-                </Link>
-              </div>
-            </Fade>
-          </div>
-        </div>
-        <Fade direction="right" triggerOnce={true} duration={2000}>
-          <div className="side-img w-46% mx-4 min-w-[300px]   ">
-            <img src={pic} className="w-" alt="me" />
-          </div>
-        </Fade>
-      </div>
+         <Fade direction="left" triggerOnce={true} delay={1000}>
+           <div className=" w-[60%] sm:w-[40%] mt-10 " >
+             <a href="https://www.linkedin.com/in/excellence-favours-98bbb3228">
+               <div  className="primary-btn shadow-xl border-[grey] border-2 " >
+                 Hire me
+               </div>
+             </a>
+           </div>
+         </Fade>
+     </div>
+     <Fade direction="right" triggerOnce={true} duration={2000}>
+       <div className="side-img w-46% mx-4 min-w-[300px]   ">
+         <img src={pic} className="w-" alt="me" />
+       </div>
+     </Fade>
+   </div>
+ </div>
+ <Fade direction="right" triggerOnce={true} duration={2000}>
+ <div className="overlay sha shadow-xl w-[90%] justify-evenly sm:flex-row py-10 sm:p-0 flex flex-col items-center sm:h-40 relative text-white mx-auto -top-16 bg-blue-stone-950 ">
+  <div className="flex flex-col-reverse justify-center  items-center sm:my-0 my-10 ">
+    <span  className=" text-3xl  "  >Projects </span>
+    <div className="text-6xl text-web-orange-500" >
+    <CountUp duration={10} start={1}  end={14}  />{'+'}
     </div>
+  </div>
+  <div className="flex flex-col-reverse justify-center items-center sm:my-0 my-10 ">
+    <span  className=" text-3xl  " >Skills </span>
+    <div className="text-6xl text-web-orange-500" >
+  <CountUp duration={10} start={1}  end={22}  />{'+'}
+    </div>
+  </div>
+  <div className="flex flex-col-reverse justify-center items-center sm:my-0 my-10 ">
+    <span  className=" text-3xl  " >Experience </span>
+    <div className="text-6xl text-web-orange-500" >
+  <CountUp duration={10} start={1}  end={4}  />{'+'}
+    </div>
+  </div>
+  <div className="flex flex-col-reverse justify-center items-center sm:my-0 my-10 ">
+    <span  className=" text-3xl  " > Hours </span>
+    <div className="text-6xl text-web-orange-500" >
+  <CountUp duration={10} start={1}  end={15000}  />{'+'}
+    </div>
+  </div>
+ </div>
+ </Fade>
+ </div>
   );
 };
 

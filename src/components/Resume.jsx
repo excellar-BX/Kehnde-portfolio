@@ -43,7 +43,7 @@ const Resume = () => {
   ];
   return (
     <div className="min-[850px]:mx-[150px] min-[700px]:mx-6 ">
-      <div className="text-[#f49504] sm:text-7xl text-5xl font-bold m-10">Resume</div>
+      <div className="text-web-orange-500 sm:text-7xl text-5xl font-bold m-10">Resume</div>
       <div className="resume">
         {data.map((data, index) => {
           return (
@@ -58,8 +58,8 @@ const Resume = () => {
                   </div>
                 </Fade>
                 <div >
-                  <div className="indicator before:scale-75 sm:before:scale-100 sm:before:mx-[40px] before:mx-[10px] before:flex before:justify-center before:w-[30px] before:h-[30px] before:rounded-full before:bg-[#f49504]
-                  after:mx-auto after:flex after:justify-center after:w-[3px] after:h-full after:bottom-2 after:relative after:rounded-e-full after:bg-[#f49504] 
+                  <div className="indicator before:scale-75 sm:before:scale-100 sm:before:mx-[40px] before:mx-[10px] before:flex before:justify-center before:w-[30px] before:h-[30px] before:rounded-full before:bg-web-orange-500
+                  after:mx-auto after:flex after:justify-center after:w-[3px] after:h-full after:bottom-2 after:relative after:rounded-e-full after:bg-web-orange-500 
                   h-full
                   "></div>
                 </div>

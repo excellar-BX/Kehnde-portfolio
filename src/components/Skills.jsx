@@ -40,7 +40,7 @@ const Skills = () => {
       className="min-[850px]:mx-[150px] min-[700px]:mx-6 sm:p-0 p-4 my-20 "
       id="skills"
     >
-      <div className="text-5xl font-bold text-[#f49504] min-[850px]:mx-6 my-10 ">
+      <div className="text-5xl font-bold text-web-orange-500 min-[850px]:mx-6 my-10 ">
         My Skills
       </div>
       {Data.map((data) => {

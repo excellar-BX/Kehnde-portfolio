@@ -52,9 +52,9 @@ const Stories = [
 const Blog = () => {
   return (
     <div className="min-[850px]:mx-[100px] sm:p-0 p-6 md:mx-6 mx-auto my-20 " id="blog">
-      <div className="text-5xl font-bold text-[#f49504] my-10 ">My Blog</div>
+      <div className="text-5xl font-bold text-web-orange-500 my-10 ">My Blog</div>
 
-      <Fade direction="up" cascade triggerOnce={true} delay={1000} duration={3000} damping={0.1}>
+      <Fade direction="up" cascade triggerOnce={true} duration={1000} damping={0.1}>
       <div className="grid sm:grid-cols-2 gap-y-3 max-w-[900px] mx-auto grid-cols-1 ">
         {Stories.map((data, index) => {
           return ( 
@@ -72,7 +72,7 @@ const Blog = () => {
               <div className="font-extrabold text-xl w-full my-2 "  >{data.title}</div>
               <div className="text-xs my-2 " >{data.description}</div>
               <Fade direction="right" cascade triggerOnce={true} delay={1000} duration={3000} damping={0.1}>
-              <a className="text-sm my-4 text-[#f49504]  " href={data.Link}>
+              <a className="text-sm my-4 text-web-orange-500  " href={data.Link}>
                 <div>{"Read more >>"}</div>
               </a>
               </Fade>

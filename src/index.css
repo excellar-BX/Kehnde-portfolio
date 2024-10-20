@@ -15,10 +15,6 @@ body {
   padding: 0;
   /* font-family: 'Montserrat', sans-serif; */
 }
-.cv-button{
-  background: linear-gradient(90deg, #ffcc80, #fee1b5) ;
-  text-align: center;
-}
 .indicator::before {
   content: '';
   box-shadow: #ffb700 0px 0px 20px;
@@ -27,17 +23,17 @@ body {
   content: '';
 }
 .range{
-  background: linear-gradient(90deg, #ff7b00, #ffcc80);
+  background: linear-gradient(90deg, #ffa500, #ffda46);
 }
 .menu-range{
-  background: linear-gradient(90deg, #ff7b00, #ffcc80);
+  background: linear-gradient(90deg, #ffa500, #ffda46);
 }
 .preview-1{
-  background: linear-gradient(90deg, #ff7b00, #ffcc80);
-  box-shadow: #f49504 -2px 2px 7px;
+  background: linear-gradient(90deg, #ffa500, #ffda46);
+  box-shadow: #ffa500 -2px 2px 7px;
 }
 .preview-1:hover{
-  box-shadow: #f49504 2px 5px 7px;
+  box-shadow: #ffa500 2px 5px 7px;
 }
 
 .preview-2:hover{
@@ -46,38 +42,34 @@ body {
 .range{
   animation: full 1s ease-in-out ;
 }
+.project-card{
+  border-color: #984208;
+}
+
+.primary-btn{
+  width: 100%;
+  background-color: #ffa500;
+  background-size: 200% 100%;
+  padding: 12px 0;
+  border-radius: 25px;
+  text-align: center;
+  overflow: hidden;
+  line-height: 28px;
+  background-image: linear-gradient(to right, #e27c00 50%, #ffa500 50%   );
+  color: white;
+  cursor: pointer;
+  background-position: 100% 0 ;
+  transition: background-position 0.5s ease;
+}
+.primary-btn:hover{
+  background-position: 0% 0;
+}
+
 @keyframes full {
-  0% {
+  from{
     width: 0%;
   }
-  10% {
-    width: 10%;
-  }
-  20% {
-    width: 20%;
-  }
-  30% {
-    width: 30%;
-  }
-  40% {
-    width: 40%;
-  }
-  50% {
-    width: 50%;
-  }
-  60% {
-    width: 60%;
-  }
-  70% {
-    width: 70%;
-  }
-  80% {
-    width: 80%;
-  }
-  90% {
-    width: 90%;
-  }
-  100% {
+  to{
     width: 100%;
   }
 }

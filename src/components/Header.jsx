@@ -99,17 +99,17 @@ const Header = () => {
   //   };
 
   return (
-    <div className=" bg-[#100315]  ">
+    <div className=" bg-blue-stone-800  ">
       <div className="flex flex-row pl-2 pt-2 ">
-        <img src={logo} className=" w-[40px] " alt="logo" />
+        <img src={logo} className=" w-[60px] m-4 " alt="logo" />
       </div>
-      <div className="theme-btn z-50 flex rounded-xl   text-white fixed top-2 p-2 right-2 mr-4 bg-[#1c0624] w-fit ">
+      <div className="theme-btn z-50 flex rounded-xl   text-white fixed top-2 p-2 right-2 mr-4 bg-blue-stone-950 shadow-xl w-fit ">
         {themeInfo.map((data) => (
           <div key={data.text} >
             <div
             onClick={ ()=> setTheme(data.text)}
-              className={` w-10 bg-[#330c42] ${
-                theme === data.text && "text-[#d772ff]"
+              className={` w-10 bg-blue-stone-900 ${
+                theme === data.text && "text-blue-stone-400"
               }  rounded-xl p-3 mx-1  h-10`}
             >
               {data.icon}
