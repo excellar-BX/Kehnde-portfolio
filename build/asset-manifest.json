@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6fdc78f5.css",
+    "main.js": "/static/js/main.f6a19544.js",
+    "static/js/453.5048e993.chunk.js": "/static/js/453.5048e993.chunk.js",
+    "static/media/me1.png": "/static/media/me1.1c30d2798a4c3284bf2a.png",
+    "static/media/me2.png": "/static/media/me2.52023fc5103f55c6d614.png",
+    "static/media/FAVOURS_EXCELLENCE_CV.pdf": "/static/media/FAVOURS_EXCELLENCE_CV.8b104a2445f25f34e1a8.pdf",
+    "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
+    "static/media/logo.png": "/static/media/logo.fb7dbe9d79e07871c903.png",
+    "static/media/boy.png": "/static/media/boy.b2e76d04726442d8e788.png",
+    "static/media/blog1.png": "/static/media/blog1.622ebfe57518b19c37ce.png",
+    "static/media/blog4.png": "/static/media/blog4.4b737a2df802dd40840c.png",
+    "static/media/blog5.png": "/static/media/blog5.4101e892b7739ba80fda.png",
+    "static/media/blog2.png": "/static/media/blog2.ccf68a818c4b8932c9f1.png",
+    "static/media/blog3.png": "/static/media/blog3.1eb53ab3cf241a6cbe36.png",
+    "index.html": "/index.html",
+    "main.6fdc78f5.css.map": "/static/css/main.6fdc78f5.css.map",
+    "main.f6a19544.js.map": "/static/js/main.f6a19544.js.map",
+    "453.5048e993.chunk.js.map": "/static/js/453.5048e993.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6fdc78f5.css",
+    "static/js/main.f6a19544.js"
+  ]
+}
