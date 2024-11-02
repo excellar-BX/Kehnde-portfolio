@@ -69,6 +69,33 @@ const ProjectsDetails = [
     previewLink: "https://excellencecom.pages.dev",
     languages: ["#ReactJs", "#Tailwind", "#Redux"],
   },
+  {
+    image: pic,
+    title: "Travel Landing Page",
+    description:
+      "Travel guide and planning tool for exploring new destinations.",
+    githubLink: "https://github.com/excellar-BX",
+    previewLink: "https://travelcompanionpage.pages.dev",
+    languages: ["#ReactJs", "#Tailwind", "#Expressjs", "#MongoDB"],
+  },
+  {
+    image: pic,
+    title: "Calculator",
+    description:
+      "A simple online Calculator for simple computations.",
+    githubLink: "https://github.com/excellar-BX",
+    previewLink: "https://mywebcalculator.pages.dev",
+    languages: ["#Css", "#Html", "#Javascript"],
+  },
+  {
+    image: pic,
+    title: "SwiftCash",
+    description:
+      "A Tool for handling online transactions.",
+    githubLink: "https://github.com/excellar-BX",
+    previewLink: "https://excellencecom.pages.dev",
+    languages: ["#ReactJs", "#Tailwind"],
+  },
 ];
 
 const languages = [
