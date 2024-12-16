@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import { BiArrowFromBottom, BiCommentDetail } from "react-icons/bi";
-import pic from "../src/assets/boy.png";
 import {
   BarLoader,
   BeatLoader,

@@ -24,8 +24,8 @@ import {
   Slide,
   Zoom,
 } from "react-awesome-reveal";
-import CountUp from "react-countup";
 import { TypeAnimation } from "react-type-animation";
+import CountUp from "react-countup";
 const Hero = () => {
   const Nav = [
     {
@@ -131,21 +131,21 @@ const Hero = () => {
          </div>
        </Fade>
 
+           <div className=" w-[60%] sm:w-[30%] mt-10 " >
          <Fade direction="left" triggerOnce={true} delay={1000}>
-           <div className=" w-[60%] sm:w-[40%] mt-10 " >
              <a href="https://www.linkedin.com/in/excellence-favours-98bbb3228">
-               <div  className="primary-btn shadow-xl border-[grey] border-2 " >
+               <div  className="primary-btn shadow-xl " >
                  Hire me
                </div>
              </a>
-           </div>
          </Fade>
+           </div>
      </div>
+       <div className="side-img w-full sm:w-[60%] mx-4  ">
      <Fade direction="right" triggerOnce={true} duration={2000}>
-       <div className="side-img w-46% mx-4 min-w-[300px]   ">
-         <img src={pic} className="w-" alt="me" />
-       </div>
+         <img src={pic} className="w-full relative right-10 scale-90 sm:scale-125 " alt="me" />
      </Fade>
+       </div>
    </div>
  </div>
  <Fade direction="right" triggerOnce={true} duration={2000}>
