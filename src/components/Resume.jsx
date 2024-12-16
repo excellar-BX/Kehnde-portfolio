@@ -51,8 +51,8 @@ const Resume = () => {
               <div className=" flex-row sm:mx-0 mr-2 flex">
                 <Fade direction="down" cascade damping={0.05} duration={2000} triggerOnce >
                   <div className=" font-semibold rounded-s-full scale-75 sm:scale-100  bg-web-orange-500 sm:m-0 ml-1 pl-4 inline-flex py-0.5  h-[29px] ">
-                    <p className="text-xl ">{data.year}</p>
-                    <div className="text-[#7c7c7c] text-[34px] bottom-1 left-[26px] relative rounded ">
+                    <p className="text-xl text-white ">{data.year}</p>
+                    <div className="text-web-orange-500 text-[34px] bottom-1 left-[26px] relative rounded ">
                       <BiSolidRightArrow />
                     </div> 
                   </div>
