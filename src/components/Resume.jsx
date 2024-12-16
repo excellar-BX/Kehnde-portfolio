@@ -26,13 +26,13 @@ const Resume = () => {
       year: "2020",
       post: "Freelance at Web development",
       location: " Lagos Nigeria.",
-      info: "As a freelance web developer in Lagos, Nigeria, I honed my skills in UI maintenance and design. I collaborated with various companies to enhance their online presence through captivating web advertisements. My expertise in creating engaging designs helped businesses attract more clients, driving growth and success. This experience taught me the importance of user-centered design and effective web development strategies. I successfully delivered projects that met clients' expectations, solidifying my reputation as a skilled freelance web developer.",
+      info: "As a freelance web developer in Lagos, Nigeria, I honed my skills in UI maintenance and design. I collaborated with various companies to enhance their online presence through captivating web advertisements. I successfully delivered projects that met clients' expectations, solidifying my reputation as a skilled freelance web developer.",
     },
     {
       year: "2023",
       post: "Bournvita Boot Camp",
       location: "Bournvita NG",
-      info: "The Bournvita Boot Camp was a transformative experience that expanded my skill set in cutting-edge technologies. I learned Python, Swift XR, Augmented Reality, and Google Earth, gaining hands-on experience in emerging tech fields. The boot camp provided a comprehensive understanding of these technologies, enabling me to approach complex problems with innovative solutions. Upon completion, I received a certificate, validating my expertise and commitment to staying up-to-date with industry advancements."
+      info: "The Bournvita Boot Camp was a transformative experience that expanded my skill set in cutting-edge technologies. I learned Python, Swift XR, Augmented Reality, and Google Earth, gaining hands-on experience in emerging tech fields."
     },
     {
       year: "2024",
