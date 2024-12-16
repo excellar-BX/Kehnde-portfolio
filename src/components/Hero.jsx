@@ -24,6 +24,7 @@ import {
   Slide,
   Zoom,
 } from "react-awesome-reveal";
+import CountUp from "react-countup";
 import { TypeAnimation } from "react-type-animation";
 const Hero = () => {
   const Nav = [
