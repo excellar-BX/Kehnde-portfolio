@@ -25,7 +25,6 @@ import {
   Zoom,
 } from "react-awesome-reveal";
 import { TypeAnimation } from "react-type-animation";
-import CountUp from "react-countup";
 const Hero = () => {
   const Nav = [
     {
