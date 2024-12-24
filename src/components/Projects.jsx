@@ -75,7 +75,7 @@ const ProjectsDetails = [
     description:
       "Travel guide and planning tool for exploring new destinations.",
     githubLink: "https://github.com/excellar-BX",
-    previewLink: "https://travelcompanionpage.pages.dev",
+    previewLink: "https://travelcompanionpage.vercel.app",
     languages: ["#ReactJs", "#Tailwind", "#Expressjs", "#MongoDB"],
   },
   {
