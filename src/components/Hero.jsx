@@ -83,7 +83,7 @@ const Hero = () => {
    </div>
 
    <div className=" flex flex-row max-[1024px]:flex-col-reverse ">
-     <div className=" w-[70%] min-w-[300px] m-20 max-[500px]:mx-3">
+     <div className=" w-[70%] min-w-[300px] mx-20 my-5 max-[500px]:mx-3">
        <Fade cascade damping={0.2} direction="left" triggerOnce={true}>
          <div>
            <p className="text-white text-xl max-[460px]:text-sm mx-2 my-5 ">
