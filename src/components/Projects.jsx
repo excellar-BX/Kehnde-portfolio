@@ -102,7 +102,7 @@ const ProjectsDetails = [
     description:
       " A tool for reading online ebooks written by the Author Raven, which you could also download the book",
     githubLink: "https://github.com/excellar-BX",
-    previewLink: "https://ravenreads.pages.dev",
+    previewLink: "https://ravenreads.vercel.app",
     languages: ["#ReactJs", "#Tailwind", "#Css"],
   },
 ];
