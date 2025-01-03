@@ -21,7 +21,7 @@ const ProjectsDetails = [
     description:
       "Simple task management tool for organizing and tracking daily tasks.",
     githubLink: "https://github.com/excellar-BX",
-    previewLink: "https://excellencecom.pages.dev",
+    previewLink: "https://excellencecom.vercel.app",
     languages: ["#ReactJs", "#Tailwind"],
   },
   {
@@ -30,7 +30,7 @@ const ProjectsDetails = [
     description:
       "Interactive quiz platform for testing knowledge and learning new concepts.",
     githubLink: "https://github.com/excellar-BX",
-    previewLink: "https://excellencecom.pages.dev",
+    previewLink: "https://excellencecom.vercel.app",
     languages: ["#ReactJs", "#Tailwind"],
   },
   {
@@ -39,7 +39,7 @@ const ProjectsDetails = [
     description:
       "Online shopping platform for discovering and purchasing products.",
     githubLink: "https://github.com/excellar-BX",
-    previewLink: "https://excellencecom.pages.dev",
+    previewLink: "https://excellencecom.vercel.app",
     languages: ["#ReactJs", "#Tailwind", "#Expressjs", "#MongoDB"],
   },
   {
@@ -48,7 +48,7 @@ const ProjectsDetails = [
     description:
       "Personalized fitness tracker for monitoring progress and achieving goals.",
     githubLink: "https://github.com/excellar-BX",
-    previewLink: "https://excellencecom.pages.dev",
+    previewLink: "https://excellencecom.vercel.app",
     languages: ["#ReactJs", "#Tailwind"],
   },
   {
@@ -57,7 +57,7 @@ const ProjectsDetails = [
     description:
       "Travel guide and planning tool for exploring new destinations.",
     githubLink: "https://github.com/excellar-BX",
-    previewLink: "https://excellencecom.pages.dev",
+    previewLink: "https://excellencecom.vercel.app",
     languages: ["#ReactJs", "#Tailwind", "#Expressjs", "#MongoDB"],
   },
   {
@@ -66,7 +66,7 @@ const ProjectsDetails = [
     description:
       " Customizable nutrition planning tool for healthy eating and weight management.",
     githubLink: "https://github.com/excellar-BX",
-    previewLink: "https://excellencecom.pages.dev",
+    previewLink: "https://excellencecom.vercel.app",
     languages: ["#ReactJs", "#Tailwind", "#Redux"],
   },
   {
@@ -93,8 +93,17 @@ const ProjectsDetails = [
     description:
       "A Tool for handling online transactions.",
     githubLink: "https://github.com/excellar-BX",
-    previewLink: "https://excellencecom.pages.dev",
+    previewLink: "https://excellencecom.vercel.app",
     languages: ["#ReactJs", "#Tailwind"],
+  },
+{
+    image: pic,
+    title: "Raven reads",
+    description:
+      " A tool for reading online ebooks written by the Author Raven, which you could also download the book",
+    githubLink: "https://github.com/excellar-BX",
+    previewLink: "https://ravenreads.pages.dev",
+    languages: ["#ReactJs", "#Tailwind", "#Css"],
   },
 ];
 
