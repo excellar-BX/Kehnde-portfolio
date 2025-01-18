@@ -45,7 +45,7 @@ const Skills = () => {
       </div>
       {Data.map((data) => {
         return (
-          <div className="w-[80%]">
+          <div className="sm:w-[80%] w-full ">
             <div className="mx-3 inline-block relative top-5 ">
               {data.stack}
             </div>
@@ -61,7 +61,7 @@ const Skills = () => {
       })}
 <div>
   
-<div className="w-[80%]">
+<div className="sm:w-[80%] w-full">
         <div className="mx-3 inline-block relative top-5  ">React Js</div>
         <div className="text-right block mx-3 ">
           Intermediate
@@ -71,7 +71,7 @@ const Skills = () => {
           <div className={`range h-3 rounded-full w-[100%] hover:animate-pulse `}></div>
         </div>
       </div>
-<div className="w-[80%]">
+<div className="sm:w-[80%] w-full">
         <div className="mx-3 inline-block relative top-5  ">React Native</div>
         <div className="text-right block mx-3 ">
         Beginner
@@ -81,7 +81,7 @@ const Skills = () => {
           <div className={`range h-3 rounded-full w-[100%] hover:animate-pulse `}></div>
         </div>
       </div>
-<div className="w-[80%]">
+<div className="sm:w-[80%] w-full">
         <div className="mx-3 inline-block relative top-5  ">Mongo DB</div>
         <div className="text-right block mx-3 ">
           Intermediate
