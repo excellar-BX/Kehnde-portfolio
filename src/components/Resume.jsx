@@ -36,8 +36,14 @@ const Resume = () => {
     },
     {
       year: "2024",
-      post: "Introduction to frontend development, Certificate",
-      location: "Meta",
+      post: "Internship at Slaty Ltd",
+      location: "Remote",
+      info: "During my internship at Slaty Ltd, I worked on the company’s landing page using technologies like React JS, Tailwind CSS, JavaScript, and APIs. This opportunity allowed me to enhance my skills in building dynamic, responsive, and user-centric interfaces.",
+    },
+    {
+      year: "2024",
+      post: "Introduction to Frontend development, Certificate",
+      location: "Meta(Coursera)",
       info: "This course deepened my understanding of frontend development principles, equipping me to build responsive and user-friendly web applications. It solidified my expertise in delivering exceptional digital experiences aligned with industry standards." ,
     },
   ];
