@@ -39,17 +39,17 @@ const Resume = () => {
     },
     {
       year: "2024",
-      endYear:"Present",
-      post: "Internship at Slaty Ltd",
-      location: "Remote",
-      info: "During my internship at Slaty Ltd, I worked on the company’s landing page using technologies like React JS, Tailwind CSS, JavaScript, and APIs. This opportunity allowed me to enhance my skills in building dynamic, responsive, and user-centric interfaces.",
-    },
-    {
-      year: "2024",
       endYear:"2024",
       post: "Introduction to Frontend development, Certificate",
       location: "Meta(Coursera)",
       info: "This course deepened my understanding of frontend development principles, equipping me to build responsive and user-friendly web applications. It solidified my expertise in delivering exceptional digital experiences aligned with industry standards." ,
+    },
+    {
+      year: "2024",
+      endYear:"Present",
+      post: "Internship at Slaty Ltd",
+      location: "Remote",
+      info: "During my internship at Slaty Ltd, I worked on the company’s landing page using technologies like React JS, Tailwind CSS, JavaScript, and APIs. This opportunity allowed me to enhance my skills in building dynamic, responsive, and user-centric interfaces.",
     },
   ];
   return (
@@ -71,7 +71,7 @@ const Resume = () => {
                   <Fade duration={2000} direction="up" cascade triggerOnce damping={0.2} >
                     <div className="sm:text-3xl text-2xl sm:my-2 my-1  font-bold">{data.post}</div>
                     <div className="sm:text-lg text-md sm:my-2 my-1 font-semibold">{data.location}</div>
-                    <div className="sm:text-sm text-md sm:my-2 my-1 font-semibold">{data.year} " - " {data.endYear}</div>
+                    <div className="sm:text-sm text-md sm:my-2 my-1 italic ">{data.year} " - " {data.endYear}</div>
                     <div className="sm:text-lg text-sm ">{data.info}</div>
                   </Fade>
                 </div>
