@@ -17,7 +17,7 @@ const About = () => {
 
 Passionate about innovation and industry trends, I collaborate with designers and product teams to bring ideas to life, crafting clean, efficient, and high-quality code. Whether optimizing user interfaces or solving complex challenges, I approach every project with a solutions-driven mindset and a dedication to excellence.  </div>
         <div className="primary-btn font-semibold rounded-full border-2 text-semibold text-white  border-[#f9bd64] dark:border-white my-10 w-[60%] sm:w-[40%] flex items-center justify-center  ">
-          <a href={Resume} download>Download CV</a> 
+          <a href={Resume} download="FAVOURS_EXCELLENCE_.pdf">Download CV</a> 
         </div>
         </Fade>
       </div>
