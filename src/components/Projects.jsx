@@ -21,8 +21,8 @@ const ProjectsDetails = [
     description:
       "Simple task management tool for organizing and tracking daily tasks.",
     githubLink: "https://github.com/excellar-BX",
-    previewLink: "https://excellencecom.vercel.app",
-    languages: ["#ReactJs", "#Tailwind"],
+    previewLink: "https://excellence-todo.vercel.app",
+    languages: ["#Html", "#Css", "#Javascript"],
   },
   {
     image: pic,
