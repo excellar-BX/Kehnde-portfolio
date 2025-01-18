@@ -20,25 +20,25 @@ const Resume = () => {
       year: "2017",
       post: "Secondary school education",
       location: "Badagry Grammar School, Lagos Nigeria.",
-      info: "During my secondary school days at Badagry Grammar School, Lagos Nigeria. I developed a strong passion for computer and robotics skills. I actively participated in various competitions, showcasing my expertise and innovative ideas. This foundation laid the groundwork for my future endeavors in technology. My achievements in secondary school instilled in me the confidence to pursue a career in tech, and I am proud to have started my journey in this field at such a young age.",
+      info: "During my time at Badagry Grammar School, I developed a passion for computers and robotics, actively participating in competitions to showcase my innovative ideas. These experiences laid the foundation for my career in technology."
     },
     {
       year: "2020",
       post: "Freelance at Web development",
       location: " Lagos Nigeria.",
-      info: "As a freelance web developer in Lagos, Nigeria, I honed my skills in UI maintenance and design. I collaborated with various companies to enhance their online presence through captivating web advertisements. I successfully delivered projects that met clients' expectations, solidifying my reputation as a skilled freelance web developer.",
+      info: "As a freelance web developer, I specialized in UI design and maintenance, collaborating with companies to enhance their online presence through engaging web advertisements. My ability to deliver high-quality projects earned me a solid reputation in the field."
     },
     {
       year: "2023",
       post: "Bournvita Boot Camp",
       location: "Bournvita NG",
-      info: "The Bournvita Boot Camp was a transformative experience that expanded my skill set in cutting-edge technologies. I learned Python, Swift XR, Augmented Reality, and Google Earth, gaining hands-on experience in emerging tech fields."
+      info: "At the Bournvita Boot Camp, I gained hands-on experience with emerging technologies, including Python, Swift XR, Augmented Reality, and Google Earth, expanding my skill set in innovative tech fields." 
     },
     {
       year: "2024",
       post: "Introduction to frontend development, Certificate",
       location: "Meta",
-      info: "Completing the 'Introduction to Frontend Development' course on Coursera, offered by Meta, marked a significant milestone in my journey. This course deepened my understanding of frontend development principles, best practices, and industry standards. I gained a solid foundation in building responsive, user-friendly interfaces and web applications. With this knowledge, I am confident in my ability to create exceptional digital experiences that meet the evolving needs of users and businesses alike.",
+      info: "This course deepened my understanding of frontend development principles, equipping me to build responsive and user-friendly web applications. It solidified my expertise in delivering exceptional digital experiences aligned with industry standards." ,
     },
   ];
   return (
