@@ -71,7 +71,7 @@ const Resume = () => {
                   <Fade duration={2000} direction="up" cascade triggerOnce damping={0.2} >
                     <div className="sm:text-3xl text-2xl sm:my-2 my-1  font-bold">{data.post}</div>
                     <div className="sm:text-lg text-md sm:my-2 my-1 font-semibold">{data.location}</div>
-                    <div className="sm:text-sm text-md sm:my-2 my-1 italic ">{data.year} " - " {data.endYear}</div>
+                    <div className="sm:text-[12px] text-md sm:my-2 my-1 italic ">{data.year} - {data.endYear}</div>
                     <div className="sm:text-lg text-sm ">{data.info}</div>
                   </Fade>
                 </div>
