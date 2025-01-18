@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="sm:text-7xl min-[700px]:ml-6 text-5xl font-bold text-web-orange-500 pb-4  ">
         Connect With Me
       </div>
-      <form className=" w-[80%] mx-auto " action="">
+      <form className=" sm:w-[80%] w-full mx-auto " action="">
         <div>
           <Inputs
             label="Full name"
