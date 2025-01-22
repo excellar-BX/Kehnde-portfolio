@@ -133,7 +133,7 @@ const Hero = () => {
 
            <div className=" w-[60%] sm:w-[30%] mt-10 " >
          <Fade direction="left" triggerOnce={true} delay={1000}>
-             <a href="https://www.linkedin.com/in/excellence-favours-98bbb3228">
+             <a href="https://www.linkedin.com/in/favours-excellence-98bbb3228">
                <div  className="primary-btn shadow-xl " >
                  Hire me
                </div>
