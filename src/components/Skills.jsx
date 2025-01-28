@@ -23,6 +23,7 @@ const Skills = () => {
     { stack: "Node Js", level: "Intermediate", rangeNumber: 50 },
   ];
   const otherSkills = [
+    { stack: "Next.js" },
     { stack: "Express js" },
     { stack: "Git" },
     { stack: "Restful APIs" },
