@@ -31,7 +31,16 @@ const ProjectsDetails = [
       "Weather app for checking realtime weather conditions for a particular city.",
     githubLink: "https://github.com/excellar-BX/weather-app",
     previewLink: "https://excellence-weather-app.vercel.app/",
-    languages: ["#NextJs", "#Tailwind", "#Typescript"],
+    languages: ["#NextJs", "#ReactJs","#Tailwind", "#Typescript"],
+  },
+    {
+    image: pic,
+    title: "Travel Landing Page",
+    description:
+      "Travel guide and planning tool for exploring new destinations.",
+    githubLink: "https://github.com/excellar-BX",
+    previewLink: "https://travelcompanionpage.vercel.app",
+    languages: ["#ReactJs", "#Tailwind"],
   },
   {
     image: pic,
@@ -77,15 +86,6 @@ const ProjectsDetails = [
     githubLink: "https://github.com/excellar-BX",
     previewLink: "https://excellencecom.vercel.app",
     languages: ["#ReactJs", "#Tailwind", "#Redux"],
-  },
-  {
-    image: pic,
-    title: "Travel Landing Page",
-    description:
-      "Travel guide and planning tool for exploring new destinations.",
-    githubLink: "https://github.com/excellar-BX",
-    previewLink: "https://travelcompanionpage.vercel.app",
-    languages: ["#ReactJs", "#Tailwind", "#Expressjs", "#MongoDB"],
   },
   {
     image: pic,
