@@ -195,7 +195,7 @@ const Projects = () => {
                     <div className="text-[12px] ml-2 my-1 ">{data.description}</div>
                     <div className="flex flex-row flex-wrap my-1 px-2 w-[95%] text-xs ">
                       {data.languages.map((languages) => (
-                        <div className="bg-[#eee] w-fit bg-opacity-30 p-1 rounded-full mx-1  my-1">
+                        <div className="bg-[#eee] dark:bg-opacity-30 w-fit bg-opacity-70 p-1 rounded-full mx-1  my-1">
                           {languages}
                         </div>
                       ))}
