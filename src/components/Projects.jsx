@@ -26,6 +26,15 @@ const ProjectsDetails = [
   },
   {
     image: pic,
+    title: "Weather app",
+    description:
+      "Weather app for checking realtime weather conditions for a particular city.",
+    githubLink: "https://github.com/excellar-BX/weather-app",
+    previewLink: "https://excellence-weather-app.vercel.app/",
+    languages: ["#NextJs", "#Tailwind", "#Typescript"],
+  },
+  {
+    image: pic,
     title: "Quiz app",
     description:
       "Interactive quiz platform for testing knowledge and learning new concepts.",
@@ -113,6 +122,8 @@ const languages = [
   "#Tailwind",
   "#Html",
   "#Css",
+  '#NextJs',
+  '#Typescript',
   "#Javascript",
   "#ReactNative",
   "#Redux",
