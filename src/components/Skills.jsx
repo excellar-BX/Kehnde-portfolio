@@ -16,11 +16,11 @@ import {
 
 const Skills = () => {
   const Data = [
-    { stack: "Html", level: "Advanced", rangeNumber: 100 },
-    { stack: "CSS", level: "Advanced", rangeNumber: 90 },
-    { stack: "Javascript", level: "Advanced", rangeNumber: 70 },
-    { stack: "Tailwind", level: "Advanced", rangeNumber: 80 },
-    { stack: "Node Js", level: "Intermediate", rangeNumber: 50 },
+    { stack: "Html", level: "Advanced", rangeNumber: "w-[100%]" },
+    { stack: "CSS", level: "Advanced", rangeNumber: "w-[90%]" },
+    { stack: "Javascript", level: "Advanced", rangeNumber: "w-[70%]" },
+    { stack: "Tailwind", level: "Advanced", rangeNumber:"w-[80%]" },
+    { stack: "Node Js", level: "Intermediate", rangeNumber: "w-[50%]" },
   ];
   const otherSkills = [
     { stack: "Next.js" },
@@ -54,7 +54,7 @@ const Skills = () => {
               {data.level}
               <div className={`    `}></div>
             </div>
-            <div className={` my-2  w-[${data.rangeNumber}%] `}>
+            <div className={` my-2  ${data.rangeNumber} `}>
               <div className={`range hover:animate-pulse h-3 rounded-full w-[100%]`}></div>
             </div>
           </div>
