@@ -16,7 +16,7 @@ import {
 
 const ProjectsDetails = [
   {
-    image: "todolist1.png",
+    image: "/todolist1.png",
     title: "Todo list app",
     description:
       "Simple task management tool for organizing and tracking daily tasks.",
@@ -25,7 +25,7 @@ const ProjectsDetails = [
     languages: ["#Html", "#Css", "#Javascript"],
   },
   {
-    image: "weather1.png",
+    image: "/weather1.png",
     title: "Weather app",
     description:
       "Weather app for checking realtime weather conditions for a particular city.",
