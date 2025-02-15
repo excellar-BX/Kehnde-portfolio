@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import pic from "../assets/blog5.png";
+import pic from "/pending.png";
 import {
   AttentionSeeker,
   Bounce,
@@ -25,6 +25,15 @@ const ProjectsDetails = [
     languages: ["#Html", "#Css", "#Javascript"],
   },
   {
+    image: "/stopwatch1.png",
+    title: "My Stopwatch",
+    description:
+      "A simple stopwatch app with JavaScript.",
+    githubLink: "https://github.com/excellar-BX",
+    previewLink: "https://excellence-stopwatch.vercel.app",
+    languages: ["#Html", "#Css", "#Javascript"],
+  },
+  {
     image: "/weather1.png",
     title: "Weather app",
     description:
@@ -33,8 +42,17 @@ const ProjectsDetails = [
     previewLink: "https://excellence-weather-app.vercel.app/",
     languages: ["#NextJs", "#ReactJs","#Tailwind", "#Typescript"],
   },
+  {
+    image: "/oxyvit1.png",
+    title: "Oxyvit",
+    description:
+      "Landing page for Oxyvit Multivitamins.",
+    githubLink: "https://github.com/excellar-BX/weather-app",
+    previewLink: "https://excellencecom.vercel.app/",
+    languages: ["#NextJs", "#ReactJs","#Tailwind", "#Typescript"],
+  },
     {
-    image: pic,
+    image: "/travel1.png",
     title: "Travel Landing Page",
     description:
       "Travel guide and planning tool for exploring new destinations.",
@@ -45,6 +63,15 @@ const ProjectsDetails = [
   {
     image: pic,
     title: "Quiz app",
+    description:
+      "Interactive quiz platform for testing knowledge and learning new concepts.",
+    githubLink: "https://github.com/excellar-BX",
+    previewLink: "https://excellencecom.vercel.app",
+    languages: ["#ReactJs", "#Tailwind"],
+  },
+  {
+    image: "/slaty1.pic",
+    title: "Slaty",
     description:
       "Interactive quiz platform for testing knowledge and learning new concepts.",
     githubLink: "https://github.com/excellar-BX",
@@ -88,7 +115,7 @@ const ProjectsDetails = [
     languages: ["#ReactJs", "#Tailwind", "#Redux"],
   },
   {
-    image: pic,
+    image: "/calculator1.png",
     title: "Calculator",
     description:
       "A simple online Calculator for simple computations.",
@@ -106,7 +133,7 @@ const ProjectsDetails = [
     languages: ["#ReactJs", "#Tailwind"],
   },
 {
-    image: pic,
+    image: "/raven1.png",
     title: "Raven reads",
     description:
       " A tool for reading online ebooks written by the Author Raven, which you could also download the book",
