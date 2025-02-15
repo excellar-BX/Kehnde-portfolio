@@ -70,7 +70,7 @@ const ProjectsDetails = [
     languages: ["#ReactJs", "#Tailwind"],
   },
   {
-    image: "/slaty1.pic",
+    image: "/slaty1.png",
     title: "Slaty",
     description:
       "Discover how slaty can help you get better grades.",
