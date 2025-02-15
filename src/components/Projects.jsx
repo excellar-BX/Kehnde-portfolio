@@ -20,7 +20,7 @@ const ProjectsDetails = [
     title: "Todo list app",
     description:
       "Simple task management tool for organizing and tracking daily tasks.",
-    githubLink: "https://github.com/excellar-BX",
+    githubLink: "https://github.com/excellar-BX/PRODIGY_WD_04",
     previewLink: "https://excellence-todo.vercel.app",
     languages: ["#Html", "#Css", "#Javascript"],
   },
@@ -29,7 +29,7 @@ const ProjectsDetails = [
     title: "My Stopwatch",
     description:
       "A simple stopwatch app with JavaScript.",
-    githubLink: "https://github.com/excellar-BX",
+    githubLink: "https://github.com/excellar-BX/PRODIGY_WD_02",
     previewLink: "https://excellence-stopwatch.vercel.app",
     languages: ["#Html", "#Css", "#Javascript"],
   },
@@ -47,7 +47,7 @@ const ProjectsDetails = [
     title: "Oxyvit",
     description:
       "Landing page for Oxyvit Multivitamins.",
-    githubLink: "https://github.com/excellar-BX/weather-app",
+    githubLink: "https://github.com/excellar-BX/",
     previewLink: "https://excellencecom.vercel.app/",
     languages: ["#NextJs", "#ReactJs","#Tailwind", "#Typescript"],
   },
@@ -56,7 +56,7 @@ const ProjectsDetails = [
     title: "Travel Landing Page",
     description:
       "Travel guide and planning tool for exploring new destinations.",
-    githubLink: "https://github.com/excellar-BX",
+    githubLink: "https://github.com/excellar-BX/Travel-companion",
     previewLink: "https://travelcompanionpage.vercel.app",
     languages: ["#ReactJs", "#Tailwind"],
   },
@@ -73,14 +73,14 @@ const ProjectsDetails = [
     image: "/slaty1.pic",
     title: "Slaty",
     description:
-      "Interactive quiz platform for testing knowledge and learning new concepts.",
-    githubLink: "https://github.com/excellar-BX",
-    previewLink: "https://excellencecom.vercel.app",
+      "Discover how slaty can help you get better grades.",
+    githubLink: "https://github.com/excellar-BX/slaty",
+    previewLink: "https://slaty.vercel.app",
     languages: ["#ReactJs", "#Tailwind"],
   },
   {
     image: pic,
-    title: "Nima stores ",
+    title: "AfriBuy",
     description:
       "Online shopping platform for discovering and purchasing products.",
     githubLink: "https://github.com/excellar-BX",
