@@ -20,7 +20,7 @@ const ProjectsDetails = [
     title: "Todo list app",
     description:
       "Simple task management tool for organizing and tracking daily tasks.",
-    githubLink: "https://github.com/excellar-BX/PRODIGY_WD_04",
+    githubLink: "https://github.com/excellar-BX/Todo-list",
     previewLink: "https://excellence-todo.vercel.app",
     languages: ["#Html", "#Css", "#Javascript"],
   },
@@ -56,7 +56,7 @@ const ProjectsDetails = [
     title: "Travel Landing Page",
     description:
       "Travel guide and planning tool for exploring new destinations.",
-    githubLink: "https://github.com/excellar-BX/Travel-companion",
+    githubLink: "https://github.com/excellar-BX/TravelCompanionLanding",
     previewLink: "https://travelcompanionpage.vercel.app",
     languages: ["#ReactJs", "#Tailwind"],
   },
