@@ -87,6 +87,7 @@ const ProjectsDetails = [
     previewLink: "https://slaty.vercel.app",
     languages: ["#ReactJs", "#Tailwind"],
   },
+  {/* 
   {
     image: pic,
     title: "Quiz app",
@@ -116,21 +117,12 @@ const ProjectsDetails = [
   },
   {
     image: pic,
-    title: "Travel companion",
+    title: "Travel Booking App",
     description:
       "Travel guide and planning tool for exploring new destinations.",
     githubLink: "https://github.com/excellar-BX",
     previewLink: "https://excellencecom.vercel.app",
     languages: ["#ReactJs", "#Tailwind", "#Expressjs", "#MongoDB"],
-  },
-  {
-    image: pic,
-    title: "Diet plan app",
-    description:
-      " Customizable nutrition planning tool for healthy eating and weight management.",
-    githubLink: "https://github.com/excellar-BX",
-    previewLink: "https://excellencecom.vercel.app",
-    languages: ["#ReactJs", "#Tailwind", "#Redux"],
   },
   {
     image: pic,
@@ -141,6 +133,7 @@ const ProjectsDetails = [
     previewLink: "https://excellencecom.vercel.app",
     languages: ["#ReactJs", "#Tailwind"],
   },
+  */}
 
 ];
 
