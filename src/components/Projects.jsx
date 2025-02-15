@@ -16,7 +16,7 @@ import {
 
 const ProjectsDetails = [
   {
-    image: pic,
+    image: "/todolist1.png",
     title: "Todo list app",
     description:
       "Simple task management tool for organizing and tracking daily tasks.",
@@ -25,7 +25,7 @@ const ProjectsDetails = [
     languages: ["#Html", "#Css", "#Javascript"],
   },
   {
-    image: pic,
+    image: "/weather1.png",
     title: "Weather app",
     description:
       "Weather app for checking realtime weather conditions for a particular city.",
@@ -177,7 +177,7 @@ const Projects = () => {
                 <div className=" m-4 xl:w-[300px] w-[250px] mx-auto h-[400px] border-web-orange-500 border-[3px] rounded-xl px-2 py-3 ">
                   <div className="overflow-hidden w-[95%] mx-auto my-1 rounded-lg ">
                     <img
-                      className="hover:scale-110 transition-all ease-in duration-300 w-full h-[150px]  "
+                      className="hover:scale-110 transition-all ease-in duration-300 object-cover w-full h-[150px]  "
                       src={data.image}
                       alt={data.title}
                     />
