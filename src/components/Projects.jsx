@@ -61,13 +61,22 @@ const ProjectsDetails = [
     languages: ["#ReactJs", "#Tailwind"],
   },
   {
-    image: pic,
-    title: "Quiz app",
+    image: "/raven1.png",
+    title: "Raven reads",
     description:
-      "Interactive quiz platform for testing knowledge and learning new concepts.",
+      " A tool for reading online ebooks written by the Author Raven, which you could also download the book",
     githubLink: "https://github.com/excellar-BX",
-    previewLink: "https://excellencecom.vercel.app",
-    languages: ["#ReactJs", "#Tailwind"],
+    previewLink: "https://ravenreads.vercel.app",
+    languages: ["#ReactJs", "#Tailwind", "#Css"],
+  },
+    {
+    image: "/calculator1.png",
+    title: "Calculator",
+    description:
+      "A simple online Calculator for simple computations.",
+    githubLink: "https://github.com/excellar-BX",
+    previewLink: "https://mywebcalculator.pages.dev",
+    languages: ["#Css", "#Html", "#Javascript"],
   },
   {
     image: "/slaty1.png",
@@ -76,6 +85,15 @@ const ProjectsDetails = [
       "Discover how slaty can help you get better grades.",
     githubLink: "https://github.com/excellar-BX/slaty",
     previewLink: "https://slaty.vercel.app",
+    languages: ["#ReactJs", "#Tailwind"],
+  },
+  {
+    image: pic,
+    title: "Quiz app",
+    description:
+      "Interactive quiz platform for testing knowledge and learning new concepts.",
+    githubLink: "https://github.com/excellar-BX",
+    previewLink: "https://excellencecom.vercel.app",
     languages: ["#ReactJs", "#Tailwind"],
   },
   {
@@ -115,15 +133,6 @@ const ProjectsDetails = [
     languages: ["#ReactJs", "#Tailwind", "#Redux"],
   },
   {
-    image: "/calculator1.png",
-    title: "Calculator",
-    description:
-      "A simple online Calculator for simple computations.",
-    githubLink: "https://github.com/excellar-BX",
-    previewLink: "https://mywebcalculator.pages.dev",
-    languages: ["#Css", "#Html", "#Javascript"],
-  },
-  {
     image: pic,
     title: "SwiftCash",
     description:
@@ -132,15 +141,7 @@ const ProjectsDetails = [
     previewLink: "https://excellencecom.vercel.app",
     languages: ["#ReactJs", "#Tailwind"],
   },
-{
-    image: "/raven1.png",
-    title: "Raven reads",
-    description:
-      " A tool for reading online ebooks written by the Author Raven, which you could also download the book",
-    githubLink: "https://github.com/excellar-BX",
-    previewLink: "https://ravenreads.vercel.app",
-    languages: ["#ReactJs", "#Tailwind", "#Css"],
-  },
+
 ];
 
 const languages = [
