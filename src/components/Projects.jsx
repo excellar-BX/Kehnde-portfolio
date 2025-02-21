@@ -15,6 +15,15 @@ import {
 
 const ProjectsDetails = [
   {
+    image: "/slaty1.png",
+    title: "Slaty",
+    description:
+      "Discover how slaty can help you get better grades.",
+    githubLink: "https://github.com/excellar-BX/slaty",
+    previewLink: "https://slaty.vercel.app",
+    languages: ["#ReactJs", "#Tailwind"],
+  },
+  {
     image: "/todolist1.png",
     title: "Todo list app",
     description:
@@ -77,15 +86,7 @@ const ProjectsDetails = [
     previewLink: "https://mywebcalculator.pages.dev",
     languages: ["#Css", "#Html", "#Javascript"],
   },
-  {
-    image: "/slaty1.png",
-    title: "Slaty",
-    description:
-      "Discover how slaty can help you get better grades.",
-    githubLink: "https://github.com/excellar-BX/slaty",
-    previewLink: "https://slaty.vercel.app",
-    languages: ["#ReactJs", "#Tailwind"],
-  },
+  
   /* 
   {
     image: pic,
