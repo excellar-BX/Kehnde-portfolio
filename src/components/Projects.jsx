@@ -48,7 +48,7 @@ const ProjectsDetails = [
     description:
       "Landing page for Oxyvit Multivitamins.",
     githubLink: "https://github.com/excellar-BX/",
-    previewLink: "https://excellencecom.vercel.app/",
+    previewLink: "https://oxyvit.vercel.app/",
     languages: ["#NextJs", "#ReactJs","#Tailwind", "#Typescript"],
   },
     {
