@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import pic from "../assets/pending.png";
 import {
   AttentionSeeker,
   Bounce,
