@@ -86,7 +86,7 @@ const ProjectsDetails = [
     previewLink: "https://slaty.vercel.app",
     languages: ["#ReactJs", "#Tailwind"],
   },
-  {/* 
+  /* 
   {
     image: pic,
     title: "Quiz app",
@@ -132,7 +132,7 @@ const ProjectsDetails = [
     previewLink: "https://excellencecom.vercel.app",
     languages: ["#ReactJs", "#Tailwind"],
   },
-  */}
+  */
 
 ];
 
