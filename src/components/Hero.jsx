@@ -126,8 +126,7 @@ const Hero = () => {
            </span>
          </div>
          <div className="w-[90%] m-3 overflow-y-hidden  text-sm max-[460px]:text-[12px] text-white ">
-           <span className=" ">As a seasoned frontend web and mobile developer, I specialize in React JS, Tailwind CSS, and React Native, delivering high-quality, responsive, and scalable solutions. Passionate about cutting-edge technologies, I create exceptional user experiences and excel in collaborative environments, staying current with industry trends to craft impactful digital experiences.
-           </span>
+           <span className=" ">Frontend Developer specializing in React, JavaScript, and TypeScript, with a strong focus on creating intuitive user experiences. Skilled in collaborating with teams and clients to translate business needs into functional web applications. Experienced in remote work and cross-team communication. </span>
          </div>
        </Fade>
 
