@@ -152,7 +152,7 @@ const Hero = () => {
   <div className="flex flex-col-reverse justify-center  items-center sm:my-0 my-10 ">
     <span  className=" text-3xl  "  >Projects </span>
     <div className="text-6xl text-web-orange-500" >
-    <CountUp duration={10} start={1}  end={14}  />{'+'}
+    <CountUp duration={10} start={1}  end={8}  />{'+'}
     </div>
   </div>
   <div className="flex flex-col-reverse justify-center items-center sm:my-0 my-10 ">
