@@ -46,10 +46,16 @@ const Resume = () => {
     },
     {
       year: "2024",
-      endYear:"Present",
+      endYear:"2025",
       post: "Internship at Slaty Ltd",
       location: "Remote",
       info: "During my internship at Slaty Ltd, I worked on the company’s landing page using technologies like React JS, Tailwind CSS, JavaScript, and APIs. This opportunity allowed me to enhance my skills in building dynamic, responsive, and user-centric interfaces.",
+    },
+      year: "2025",
+      endYear:"Present",
+      post: "Frontend Developer- Medscan security",
+      location: "Remote",
+      info: "At MedScan Security, I work on API integration, dashboard development, and the main website. I help display manufacturers, products, and recent scans while ensuring a seamless user experience. My role involves optimizing the platform for efficiency and real-time data updates.",
     },
   ];
   return (
