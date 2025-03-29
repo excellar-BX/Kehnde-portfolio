@@ -25,12 +25,13 @@ const [fullName, setFullName] = useState("");
       setFullName("");
       setEmail("");
       setMessage("");
-      setSuccess("");
+      
     } catch {
       setError("Failed to send email.");
       setSuccess("");
     }
     setLoading(false);
+    setSuccess("");
   };
 
 
