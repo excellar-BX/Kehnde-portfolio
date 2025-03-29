@@ -1,13 +1,8 @@
 import axios from "axios";
 
 
-type EmailData = {
-  fullName: string;
-  email: string;
-  message: string;
-}
 
-const sendEmail = async ({ firstName, email, message }: EmailData) => {
+const sendEmail = async ({ firstName, email, message }) => {
   const serviceID = "service_n58j6pi"; // Your EmailJS Service ID
   const templateID = "template_uhdge7p"; // Your EmailJS Template ID
   const publicKey = "cSFYRidCpUYkuslUe"; // Your EmailJS Public Key
