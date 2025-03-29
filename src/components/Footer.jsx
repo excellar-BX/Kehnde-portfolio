@@ -19,7 +19,7 @@ const [fullName, setFullName] = useState("");
     try {
       await sendEmail({ fullName, email, message });
       setError("");
-      setSuccess("Email Sent Successfully.");
+      setSuccess(!loading? "Email Sent Successfully." : "");
 
       // Reset form fields
       setFullName("");
@@ -31,7 +31,6 @@ const [fullName, setFullName] = useState("");
       setSuccess("");
     }
     setLoading(false);
-    setSuccess("");
   };
 
 
