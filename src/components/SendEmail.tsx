@@ -2,9 +2,7 @@ import axios from "axios";
 
 
 type EmailData = {
-  firstName: string;
-  lastName: string;
-  phone: string;
+  fullName: string;
   email: string;
   message: string;
 }
@@ -20,8 +18,6 @@ const sendEmail = async ({ firstName, lastName, phone, email, message }: EmailDa
     user_id: publicKey,
     template_params: {
       first_name: firstName,
-      last_name: lastName,
-      phone: phone,
       email: email,
       message: message,
     },
