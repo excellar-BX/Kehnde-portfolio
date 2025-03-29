@@ -25,7 +25,7 @@ const [fullName, setFullName] = useState("");
       setFullName("");
       setEmail("");
       setMessage("");
-      setSuccess("Email Sent Successfully.");
+      setSuccess("");
     } catch {
       setError("Failed to send email.");
       setSuccess("");
@@ -71,7 +71,7 @@ const [fullName, setFullName] = useState("");
           ></textarea>
         </div>
         <div className="w-[100%] sm:w-[30%] mx-auto my-10 " >
-        <button type="submit" className="primary-btn text-2xl   " value={loading ? "Sending..." : "Send Email"} ></button></div>
+        <button type="submit" className="primary-btn text-2xl   "  >{loading ? "Sending..." : "Send Email"}</button></div>
         <div className="text-sm my-2 text-[red]" >{error}</div>
           
             <div className="text-sm my-2 text-[green]" >{success}</div>
