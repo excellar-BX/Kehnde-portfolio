@@ -45,7 +45,7 @@ const [fullName, setFullName] = useState("");
           <Inputs
             label="Full name"
             type={"text"}
-            onChange={(e)=>{setFullName(e.target.value),setSuccess("")}}
+            onChange={(e)=>{setFullName(e.target.value);setSuccess("");setError("");}}
             placeholder={"Enter your full name....."}
           />
         </div>
@@ -53,7 +53,7 @@ const [fullName, setFullName] = useState("");
           <Inputs
             label="Email"
             type={"email"}
-            onChange={(e)=>{setEmail(e.target.value), setSuccess("")}}
+            onChange={(e)=>{setEmail(e.target.value); setSuccess("");setError("");}}
             placeholder={"Enter your email....."}
           />
         </div>
@@ -67,7 +67,7 @@ const [fullName, setFullName] = useState("");
             id=""
             cols="30"
             rows="10"
-            onChange={(e)=>{setMessage(e.target.value),setSuccess("")}}
+            onChange={(e)=>{setMessage(e.target.value);setSuccess("");setError("");}}
           ></textarea>
         </div>
         <div className="w-[100%] sm:w-[30%] mx-auto my-10 " >
