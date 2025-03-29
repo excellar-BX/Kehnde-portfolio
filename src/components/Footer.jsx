@@ -5,12 +5,12 @@ import { BiEnvelope, BiHeart, BiLogoDiscord, BiLogoDiscordAlt, BiLogoFacebook, B
 
 const Footer = () => {
 
-const [fullName, setFullName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
-  const [success, setSuccess] = useState<string>("");
-  const [error, setError] = useState<string>("");
+const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
   e.preventDefault();
@@ -45,7 +45,7 @@ const [fullName, setFullName] = useState<string>("");
           <Inputs
             label="Full name"
             type={"text"}
-            value={(e)=>{setFullName(e.target.value)}}
+            onChange={(e)=>{setFullName(e.target.value)}}
             placeholder={"Enter your full name....."}
           />
         </div>
@@ -53,7 +53,7 @@ const [fullName, setFullName] = useState<string>("");
           <Inputs
             label="Email"
             type={"email"}
-            value={(e)=>{setEmail(e.target.value)}}
+            onChange={(e)=>{setEmail(e.target.value)}}
             placeholder={"Enter your email....."}
           />
         </div>
@@ -67,11 +67,15 @@ const [fullName, setFullName] = useState<string>("");
             id=""
             cols="30"
             rows="10"
-            value={(e)=>{setMessage(e.target.value)}}
+            onChange={(e)=>{setMessage(e.target.value)}}
           ></textarea>
         </div>
         <div className="w-[100%] sm:w-[30%] mx-auto my-10 " >
-        <button type="submit" className="primary-btn text-2xl   " >submit</button></div>
+        <button type="submit" className="primary-btn text-2xl   " value= {loading ? "Sending..." : "Send Email"} ></button></div>
+        <div className="text-sm my-2 text-[red]" >{error}</div>
+          
+            <div className="text-sm my-2 text-[green]" >{success}</div>
+      
       </form>
       <div className="flex flex-col justify-start sm:flex-row"  >
       <a className="text-lg  mx-2 pt-2 " href="mailto:excellenceay33@gmail.com">
