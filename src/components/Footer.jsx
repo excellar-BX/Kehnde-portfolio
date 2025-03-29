@@ -1,8 +1,40 @@
-import React from "react";
+import React,{useState} from "react";
 import Inputs from "./Inputs";
+import sendEmail from "./SendEmail";
 import { BiEnvelope, BiHeart, BiLogoDiscord, BiLogoDiscordAlt, BiLogoFacebook, BiLogoGithub, BiLogoInstagram, BiLogoInstagramAlt, BiLogoLinkedin, BiLogoTwitter, BiLogoUpwork, BiLogoWhatsapp, BiLogoYoutube, BiSolidEnvelope } from "react-icons/bi";
 
 const Footer = () => {
+
+const [fullName, setFullName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+  const [success, setSuccess] = useState<string>("");
+  const [error, setError] = useState<string>("");
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+    setLoading(true);
+
+    try {
+      await sendEmail({ fullName, email, message });
+      setError("");
+      setSuccess("Email Sent Successfully.");
+
+      // Reset form fields
+      setFullName("");
+      setEmail("");
+      setMessage("");
+      setSuccess("Email Sent Successfully.");
+    } catch {
+      setError("Failed to send email.");
+      setSuccess("");
+    }
+    setLoading(false);
+  };
+
+
+  
   return (
     <div className="min-[850px]:mx-[150px] sm:p-0 p-6  mx-auto  " id="blog">
       <div className="sm:text-7xl min-[700px]:ml-6 text-5xl font-bold text-web-orange-500 pb-4  ">
@@ -13,6 +45,7 @@ const Footer = () => {
           <Inputs
             label="Full name"
             type={"text"}
+            value={(e)=>{setFullName(e.target.value)}}
             placeholder={"Enter your full name....."}
           />
         </div>
@@ -20,6 +53,7 @@ const Footer = () => {
           <Inputs
             label="Email"
             type={"email"}
+            value={(e)=>{setEmail(e.target.value)}}
             placeholder={"Enter your email....."}
           />
         </div>
@@ -33,6 +67,7 @@ const Footer = () => {
             id=""
             cols="30"
             rows="10"
+            value={(e)=>{setMessage(e.target.value)}}
           ></textarea>
         </div>
         <div className="w-[100%] sm:w-[30%] mx-auto my-10 " >
