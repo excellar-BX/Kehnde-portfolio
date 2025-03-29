@@ -19,7 +19,7 @@ const [fullName, setFullName] = useState("");
     try {
       await sendEmail({ fullName, email, message });
       setError("");
-      setSuccess(!loading? "Email Sent Successfully." : "");
+      setSuccess("Email Sent Successfully.");
 
       // Reset form fields
       setFullName("");
@@ -45,7 +45,7 @@ const [fullName, setFullName] = useState("");
           <Inputs
             label="Full name"
             type={"text"}
-            onChange={(e)=>{setFullName(e.target.value)}}
+            onChange={(e)=>{setFullName(e.target.value),setSuccess("")}}
             placeholder={"Enter your full name....."}
           />
         </div>
@@ -53,7 +53,7 @@ const [fullName, setFullName] = useState("");
           <Inputs
             label="Email"
             type={"email"}
-            onChange={(e)=>{setEmail(e.target.value)}}
+            onChange={(e)=>{setEmail(e.target.value), setSuccess("")}}
             placeholder={"Enter your email....."}
           />
         </div>
@@ -67,7 +67,7 @@ const [fullName, setFullName] = useState("");
             id=""
             cols="30"
             rows="10"
-            onChange={(e)=>{setMessage(e.target.value)}}
+            onChange={(e)=>{setMessage(e.target.value),setSuccess("")}}
           ></textarea>
         </div>
         <div className="w-[100%] sm:w-[30%] mx-auto my-10 " >
