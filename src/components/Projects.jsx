@@ -15,6 +15,24 @@ import {
 
 const ProjectsDetails = [
   {
+    image: "/medscan.png",
+    title: "Medscan Landing Page",
+    description:
+      "This is the offcial landing page of Medscan",
+    githubLink: "https://github.com/excellar-BX/medscan-landing",
+    previewLink: "https://medscan-landing.vercel.app",
+    languages: ["#ReactJs", "Next JS" ,"#Tailwind"],
+  },
+  {
+    image: "/skelv.png",
+    title: "Skelv",
+    description:
+      "Get Hired, Gain Experience, Build Your Portfolio.",
+    githubLink: "https://github.com/excellar-BX/Skelv-waitlist",
+    previewLink: "https://skelv-waitlist.vercel.app",
+    languages: ["#ReactJs","Next JS", "#Tailwind"],
+  },
+  {
     image: "/slaty1.png",
     title: "Slaty",
     description:
