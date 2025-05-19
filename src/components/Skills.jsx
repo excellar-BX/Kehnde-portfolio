@@ -24,6 +24,7 @@ const Skills = () => {
   ];
   const otherSkills = [
     { stack: "Next.js" },
+    { stack: "Typescript" },
     { stack: "Express js" },
     { stack: "Git" },
     { stack: "Restful APIs" },
