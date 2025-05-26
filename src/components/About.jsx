@@ -15,7 +15,7 @@ const About = () => {
         <div className="relative text-sm  sm:text-lg top-[20%] text-black font-extrabold my-2 dark:text-[#eeeeee] ">As a frontend web and mobile developer, I combine technical expertise with creative vision to deliver seamless user experiences. Proficient in React JS, Tailwind CSS, HTML, CSS3, JavaScript, React Native, and Next JS, I specialize in building responsive web applications and mobile apps that adapt effortlessly to any screen size.
 
 Passionate about innovation and industry trends, I collaborate with designers and product teams to bring ideas to life, crafting clean, efficient, and high-quality code. Whether optimizing user interfaces or solving complex challenges, I approach every project with a solutions-driven mindset and a dedication to excellence.  </div>
-        <a href="https://drive.google.com/file/d/1kv6NUBYLutACe_lcdAcRc6dHpadjX4Wf/view?usp=drivesdk" >
+        <a href="https://drive.google.com/file/d/1NhYh3VF7FrNR2IBqXIV-WQ73R7tOnvjz/view?usp=drivesdk" >
         
           <div className="primary-btn font-semibold rounded-full border-2 text-semibold text-white  border-[#f9bd64] dark:border-white my-10 w-[60%] sm:w-[40%] flex items-center justify-center  ">
           Download CV
