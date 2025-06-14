@@ -20,7 +20,7 @@ const ProjectsDetails = [
     description:
       "Break language barriers with AI-powered translation",
     githubLink: "https://github.com/excellar-BX/LingoMe",
-    previewLink: "https://lingo-mr.vercel.app",
+    previewLink: "https://lingo-me.vercel.app",
     languages: ["#ReactJs", "#NextJs" ,"#Tailwind","OCR","AI"],
   },
   {
