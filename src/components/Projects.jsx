@@ -15,6 +15,15 @@ import {
 
 const ProjectsDetails = [
   {
+    image: "/lingome.png",
+    title: "Lingo Me AI Translator",
+    description:
+      "Break language barriers with AI-powered translation",
+    githubLink: "https://github.com/excellar-BX/Lingo-Me",
+    previewLink: "https://lingo-mr.vercel.app",
+    languages: ["#ReactJs", "#NextJs" ,"#Tailwind","OCR","AI"],
+  },
+  {
     image: "/medscan.png",
     title: "Medscan Landing Page",
     description:
