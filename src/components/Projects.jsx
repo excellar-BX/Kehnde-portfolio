@@ -13,7 +13,7 @@ import {
   Zoom,
 } from "react-awesome-reveal";
 
-const ProjectsDetails = [
+const ProjectsDetails = [ 
   {
     image: "/lingome.png",
     title: "Lingo Me AI Translator",
@@ -31,6 +31,15 @@ const ProjectsDetails = [
     githubLink: "https://github.com/excellar-BX/medscan-landing",
     previewLink: "https://medscan-landing.vercel.app",
     languages: ["#ReactJs", "#NextJs" ,"#Tailwind"],
+  },
+ { 
+    image: "/medscan-monitor.png",
+    title: "Regulatory Dashboard for Medscan Security",
+    description:
+      "I optimized the Regulatory Dashboard for Medscan security",
+    githubLink: "https://github.com/excellar-BX/monitor-medscan-africa",
+    previewLink: "https://monitor-medscan-africa.vercel.app/",
+    languages: ["#ReactJs" ,"#Tailwind"],
   },
   {
     image: "/skelv.png",
