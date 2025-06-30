@@ -23,6 +23,15 @@ const ProjectsDetails = [
     previewLink: "https://lingo-me.vercel.app",
     languages: ["#ReactJs", "#NextJs" ,"#Tailwind","OCR","AI"],
   },
+{
+    image: "/slaty1.png",
+    title: "Slaty",
+    description:
+      "Discover how slaty can help you get better grades.",
+    githubLink: "https://github.com/excellar-BX/slaty",
+    previewLink: "https://slaty.vercel.app",
+    languages: ["#ReactJs", "#Tailwind"],
+  },
   {
     image: "/medscan.png",
     title: "Medscan Landing Page",
@@ -49,15 +58,6 @@ const ProjectsDetails = [
     githubLink: "https://github.com/excellar-BX/Skelv-waitlist",
     previewLink: "https://skelv-waitlist.vercel.app",
     languages: ["#ReactJs","#NextJs", "#Tailwind"],
-  },
-  {
-    image: "/slaty1.png",
-    title: "Slaty",
-    description:
-      "Discover how slaty can help you get better grades.",
-    githubLink: "https://github.com/excellar-BX/slaty",
-    previewLink: "https://slaty.vercel.app",
-    languages: ["#ReactJs", "#Tailwind"],
   },
   {
     image: "/todolist1.png",
