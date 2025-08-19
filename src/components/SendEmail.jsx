@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 const sendEmail = async ({ fullName, email, message }) => {
-  const serviceID = "service_n58j6pi"; // Your EmailJS Service ID
+  const serviceID = "service_olrxhbp"; // Your EmailJS Service ID
   const templateID = "template_82zrkfr"; // Your EmailJS Template ID
   const publicKey = "cSFYRidCpUYkuslUe"; // Your EmailJS Public Key
 
