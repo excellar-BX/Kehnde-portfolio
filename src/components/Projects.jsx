@@ -50,6 +50,15 @@ const ProjectsDetails = [
     previewLink: "https://monitor-medscan-africa.vercel.app/",
     languages: ["#ReactJs" ,"#Tailwind"],
   },
+{ 
+    image: "/trackwise.png",
+    title: "Trackwise",
+    description:
+      "Task management project with Role based access and Protected routes",
+    githubLink: "https://github.com/excellar-BX/Trackwise",
+    previewLink: "https://trackwise-excellar.vercel.app",
+    languages: ["#ReactJs", "#NextJs" ,"#Tailwind", "#Context Api"],
+  },
   {
     image: "/skelv.png",
     title: "Skelv",
