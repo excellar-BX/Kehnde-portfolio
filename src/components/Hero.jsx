@@ -1,4 +1,4 @@
-import React from "react";
+I'mimport React from "react";
 import pic from "../assets/me1.png";
 import Header from "./Header";
 import {
@@ -101,11 +101,11 @@ const Hero = () => {
              <span className="text-white text-4xl max-[460px]:text-3xl ">
                <TypeAnimation
                  sequence={[
-                   "Frontend Web Developer",
+                   "Frontend Developer",
                    1000,
-                   "Gospel Keyboardist",
+                   "Mobile App Developer",
                    1000,
-                   "Coach",
+                   "IT specialist",
                    1000,
                    "Computer Scientist",
                    1000,
@@ -113,7 +113,7 @@ const Hero = () => {
                    1000,
                    "Believer",
                    1000,
-                   "Aspiring Mobile Developer",
+                   "Gospel Keyboardist",
                    1000,
                  ]}
                  wrapper="span"
