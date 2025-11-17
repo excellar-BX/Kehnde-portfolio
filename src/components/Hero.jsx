@@ -1,4 +1,4 @@
-I'mimport React from "react";
+import React from "react";
 import pic from "../assets/me1.png";
 import Header from "./Header";
 import {
@@ -180,3 +180,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
