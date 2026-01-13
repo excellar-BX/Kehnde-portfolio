@@ -1,5 +1,5 @@
 import React from "react";
-import pic from "../assets/me2.png";
+import pic from "../assets/me3.png";
 import { AttentionSeeker, Bounce, Fade, Flip, Hinge, JackInTheBox, Reveal, Roll, Rotate, Slide, Zoom } from "react-awesome-reveal";
 import { BiHeart } from "react-icons/bi";
 const About = () => {
@@ -28,3 +28,4 @@ Passionate about innovation and industry trends, I collaborate with designers an
 };
 
 export default About;
+
