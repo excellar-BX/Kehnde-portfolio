@@ -69,24 +69,6 @@ const ProjectsDetails = [
     languages: ["#ReactJs","#NextJs", "#Tailwind"],
   },
   {
-    image: "/todolist1.png",
-    title: "Todo list app",
-    description:
-      "Simple task management tool for organizing and tracking daily tasks.",
-    githubLink: "https://github.com/excellar-BX/Todo-list",
-    previewLink: "https://excellence-todo.vercel.app",
-    languages: ["#Html", "#Css", "#Javascript"],
-  },
-  {
-    image: "/stopwatch1.png",
-    title: "My Stopwatch",
-    description:
-      "A simple stopwatch app with JavaScript.",
-    githubLink: "https://github.com/excellar-BX/PRODIGY_WD_02",
-    previewLink: "https://excellence-stopwatch.vercel.app",
-    languages: ["#Html", "#Css", "#Javascript"],
-  },
-  {
     image: "/weather1.png",
     title: "Weather app",
     description:
@@ -130,6 +112,24 @@ const ProjectsDetails = [
     githubLink: "https://github.com/excellar-BX",
     previewLink: "https://mywebcalculator.pages.dev",
     languages: ["#Css", "#Html", "#Javascript"],
+  },
+{
+    image: "/todolist1.png",
+    title: "Todo list app",
+    description:
+      "Simple task management tool for organizing and tracking daily tasks.",
+    githubLink: "https://github.com/excellar-BX/Todo-list",
+    previewLink: "https://excellence-todo.vercel.app",
+    languages: ["#Html", "#Css", "#Javascript"],
+  },
+  {
+    image: "/stopwatch1.png",
+    title: "My Stopwatch",
+    description:
+      "A simple stopwatch app with JavaScript.",
+    githubLink: "https://github.com/excellar-BX/PRODIGY_WD_02",
+    previewLink: "https://excellence-stopwatch.vercel.app",
+    languages: ["#Html", "#Css", "#Javascript"],
   },
   
   /* 
