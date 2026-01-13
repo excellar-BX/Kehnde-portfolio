@@ -7,7 +7,7 @@ const About = () => {
          
     <div id="about" className=" flex my-20 flex-row max-lg:flex-col min-[850px]:mx-[150px] mx-4 " >
       <div className="w-[50%] max-lg:w-[100%] " >
-        <img src={pic} alt="me" />
+        <img src={pic} alt="me" className="w-[45%]" />
       </div>
       <div className=" w-[50%] max-lg:w-[100%] " >
         <Fade direction="up" cascade triggerOnce={true} damping={0.1} duration={2000} >
@@ -28,4 +28,5 @@ Passionate about innovation and industry trends, I collaborate with designers an
 };
 
 export default About;
+
 
