@@ -165,6 +165,95 @@
   }
   .theme-btn:hover { border-color: var(--accent); transform: rotate(20deg); }
 
+  /* ─── MOBILE FAB NAV ─── */
+  .fab-nav {
+    display: none;
+    position: fixed;
+    z-index: 9000;
+    bottom: 28px;
+    right: 24px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+    touch-action: none;
+    user-select: none;
+  }
+  .fab-nav.is-dragging { transition: none !important; }
+  .fab-toggle {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid rgba(255,255,255,0.15);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    cursor: none;
+    box-shadow: 0 4px 24px rgba(0,212,255,0.35), 0 0 0 0 var(--accent-glow);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    position: relative;
+    z-index: 10;
+  }
+  .fab-toggle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 32px rgba(0,212,255,0.5);
+  }
+  .fab-toggle svg { transition: transform 0.3s; }
+  .fab-nav.open .fab-toggle svg { transform: rotate(45deg); }
+  .fab-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px) scale(0.9);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .fab-nav.open .fab-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+  }
+  .fab-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 10px 18px 10px 14px;
+    text-decoration: none;
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+    backdrop-filter: blur(12px);
+    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  }
+  .fab-menu a:hover {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+    transform: translateX(-4px);
+  }
+  .fab-menu a .fab-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--accent-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .fab-menu a .fab-icon svg { width: 14px; height: 14px; stroke: var(--accent); }
+
   /* ─── HERO ─── */
   #hero {
     min-height: 100vh;
@@ -262,6 +351,7 @@
     display: flex;
     gap: 16px;
     opacity: 0;
+    flex-wrap: wrap;
   }
   .btn-primary {
     background: var(--accent);
@@ -277,7 +367,11 @@
     text-decoration: none;
     display: inline-flex; align-items: center; gap: 8px;
     position: relative; overflow: hidden;
-    transition: transform 0.2s;
+    transition: transform 0.2s, opacity 0.3s;
+  }
+  .btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
   .btn-primary::after {
     content: '';
@@ -629,6 +723,30 @@
   }
   .contact-item:hover { border-color: var(--accent); color: var(--text); background: var(--accent-dim); }
   .contact-item .ci-icon { font-size: 1.2rem; }
+  .contact-socials {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+  .contact-socials a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text2);
+    transition: border-color 0.2s, color 0.2s, transform 0.2s, background 0.2s;
+  }
+  .contact-socials a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-3px);
+    background: var(--accent-dim);
+  }
   .contact-form { display: flex; flex-direction: column; gap: 16px; }
   .form-group { display: flex; flex-direction: column; gap: 8px; }
   .form-label {
@@ -652,6 +770,25 @@
   }
   .form-input:focus, .form-textarea:focus { border-color: var(--accent); }
   .form-textarea { min-height: 130px; }
+  .form-status {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    padding: 10px 14px;
+    border-radius: 6px;
+    display: none;
+  }
+  .form-status.success {
+    display: block;
+    background: rgba(0,255,179,0.1);
+    border: 1px solid var(--green);
+    color: var(--green);
+  }
+  .form-status.error {
+    display: block;
+    background: rgba(255,80,80,0.1);
+    border: 1px solid #ff5050;
+    color: #ff5050;
+  }
 
   /* ─── FOOTER ─── */
   footer {
@@ -676,7 +813,7 @@
     font-size: 0.75rem;
     color: var(--text3);
   }
-  .footer-socials { display: flex; gap: 12px; }
+  .footer-socials { display: flex; gap: 12px; flex-wrap: wrap; }
   .social-btn {
     width: 36px; height: 36px;
     border: 1px solid var(--border);
@@ -703,7 +840,6 @@
     border-bottom: 1px solid var(--border);
     position: relative;
   }
-  /* fade edges */
   .marquee-wrap::before,
   .marquee-wrap::after {
     content: '';
@@ -777,12 +913,12 @@
     opacity: 0;
   }
   .hero-photo-frame {
-    position: relative; 
+    position: relative;
     width: 280px;
-    height: 340px; 
+    height: 340px;
   }
   .hero-photo-frame::before {
-    content: ''; 
+    content: '';
     position: absolute;
     inset: -2px;
     border-radius: 18px;
@@ -813,7 +949,6 @@
     object-position: top center;
     display: block;
   }
-  /* placeholder shown when no image src */
   .photo-placeholder {
     width: 100%; height: 100%;
     display: flex;
@@ -886,12 +1021,78 @@
   @media (max-width: 768px) {
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
+    .fab-nav { display: flex; }
     #hero, section { padding-left: 24px; padding-right: 24px; }
     .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 48px; }
     .project-card.featured { grid-column: span 1; }
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
     .hero-stats { display: none; }
     .hero-photo-wrap { display: none; }
-    footer { padding: 32px 24px; }
+    .hero-ctas {
+      flex-direction: column;
+      gap: 12px;
+    }
+    .hero-ctas .btn-primary,
+    .hero-ctas .btn-secondary {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero-role .type-wrap {
+      min-width: 180px;
+    }
+    .hero-desc {
+      font-size: 0.95rem;
+    }
+    .hero-badge {
+      font-size: 0.65rem;
+      padding: 5px 12px;
+    }
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    footer { padding: 32px 24px; flex-direction: column; align-items: center; text-align: center; }
+    .footer-socials { justify-content: center; }
+    .projects-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+    section { padding: 80px 20px; }
+    .contact-socials { justify-content: flex-start; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-name {
+      font-size: clamp(2.5rem, 12vw, 3.5rem);
+    }
+    .hero-role {
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+    }
+    .hero-role .type-wrap {
+      min-width: 150px;
+    }
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+    .skill-pill {
+      font-size: 0.68rem;
+      padding: 8px 10px;
+    }
+    nav { padding: 14px 16px; }
+    #hero { padding-left: 16px; padding-right: 16px; }
+    section { padding: 60px 16px; }
+    footer { padding: 28px 16px; }
+    .project-body { padding: 18px; }
+    .project-footer { padding: 14px 18px; }
+    .project-title { font-size: 1.05rem; }
+    .project-desc { font-size: 0.82rem; }
   }
 </style>
 </head>
@@ -917,6 +1118,35 @@
     <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
   </button>
 </nav>
+
+<!-- Mobile FAB Navigation -->
+<div class="fab-nav" id="fabNav">
+  <div class="fab-menu" id="fabMenu">
+    <a href="#hero" onclick="closeFab()">
+      <span class="fab-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+      Home
+    </a>
+    <a href="#about" onclick="closeFab()">
+      <span class="fab-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+      About
+    </a>
+    <a href="#projects" onclick="closeFab()">
+      <span class="fab-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+      Work
+    </a>
+    <a href="#services" onclick="closeFab()">
+      <span class="fab-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span>
+      Services
+    </a>
+    <a href="#contact" onclick="closeFab()">
+      <span class="fab-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+      Contact
+    </a>
+  </div>
+  <button class="fab-toggle" id="fabToggle" aria-label="Navigation menu">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+  </button>
+</div>
 
 <!-- Hero -->
 <section id="hero">
@@ -954,13 +1184,12 @@
     <div class="scroll-line"></div>
   </div>
 
-  <!-- Hero Photo — replace src with your actual image path -->
+  <!-- Hero Photo -->
   <div class="hero-photo-wrap" id="heroPhoto">
     <div class="hero-photo-frame">
       <div class="hero-photo-inner">
         <img src="https://res.cloudinary.com/dleytgitd/image/upload/v1773675802/IMG-20260103-WA0046_jplc0z.jpg" alt="Excellence Favours"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-       
       </div>
       <div class="hero-photo-tag">
         <span class="dot"></span>
@@ -1047,12 +1276,10 @@
 
   <div class="about-grid">
     <div class="about-text reveal-left">
-      <!-- About Photo — replace src with your actual image path -->
       <div class="about-photo">
         <div class="about-photo-frame">
           <img src="https://res.cloudinary.com/dleytgitd/image/upload/v1773675803/IMG-20260315-WA0054_ajuhfc.jpg" alt="Excellence Favours"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          
         </div>
       </div>
       <p>I'm <strong>Excellence Favours</strong> — a frontend & full-stack developer from Lagos, Nigeria. I go by <strong>Excellar</strong>, and I'm the founder of <strong>Kexcel Labs</strong>, where I build thoughtful digital products.</p>
@@ -1588,7 +1815,7 @@
       <div class="contact-items">
         <a href="mailto:excellenceay33@gmail.com" class="contact-item">
           <span class="ci-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
-          <span><span class="__cf_email__" data-cfemail="e88d908b8d84848d868b8da8838d908b8d8484898a9bc68c8d9e">excellenceay33@gmail.com</span></span>
+          <span>excellenceay33@gmail.com</span>
         </a>
         <a href="tel:+2347015388599" class="contact-item">
           <span class="ci-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.58 3.38 2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.69A16 16 0 0 0 16 16.73l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
@@ -1603,23 +1830,51 @@
           <span>github.com/excellar-BX</span>
         </a>
       </div>
+      <!-- Social Links -->
+      <div class="contact-socials">
+        <a href="https://www.linkedin.com/in/excellence-favours-98bbb3228" target="_blank" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://twitter.com/ExcellenceAy" target="_blank" title="Twitter/X">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://instagram.com/exxcell_encxxy" target="_blank" title="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100071525263561" target="_blank" title="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://wa.me/+2347015388599" target="_blank" title="WhatsApp">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@excellenceay" target="_blank" title="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="https://github.com/excellar-BX" target="_blank" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://www.upwork.com/freelancers/~091ea1fc675945dc5f" target="_blank" title="Upwork">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>
+        </a>
+      </div>
     </div>
 
-    <div class="contact-form reveal-right">
+    <form class="contact-form reveal-right" id="contactForm">
       <div class="form-group">
         <label class="form-label">Your name</label>
-        <input type="text" class="form-input" placeholder="John Doe" />
+        <input type="text" class="form-input" id="formName" placeholder="John Doe" required />
       </div>
       <div class="form-group">
         <label class="form-label">Email address</label>
-        <input type="email" class="form-input" placeholder="you@example.com" />
+        <input type="email" class="form-input" id="formEmail" placeholder="you@example.com" required />
       </div>
       <div class="form-group">
         <label class="form-label">Message</label>
-        <textarea class="form-textarea" placeholder="Tell me about your project..."></textarea>
+        <textarea class="form-textarea" id="formMessage" placeholder="Tell me about your project..." required></textarea>
       </div>
-      <button class="btn-primary" style="width:100%; justify-content:center;">Send message <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
-    </div>
+      <div class="form-status" id="formStatus"></div>
+      <button type="submit" class="btn-primary" id="formSubmitBtn" style="width:100%; justify-content:center;">Send message <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+    </form>
   </div>
 </section>
 
@@ -1628,14 +1883,18 @@
   <div class="footer-logo">Exc<span>.</span></div>
   <div class="footer-copy">© 2025 Excellence Favours · Kexcel Labs</div>
   <div class="footer-socials">
+    <a href="https://www.linkedin.com/in/excellence-favours-98bbb3228" target="_blank" class="social-btn" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://twitter.com/ExcellenceAy" target="_blank" class="social-btn" title="Twitter/X"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://instagram.com/exxcell_encxxy" target="_blank" class="social-btn" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    <a href="https://www.facebook.com/profile.php?id=100071525263561" target="_blank" class="social-btn" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a href="https://wa.me/+2347015388599" target="_blank" class="social-btn" title="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+    <a href="https://www.youtube.com/@excellenceay" target="_blank" class="social-btn" title="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
     <a href="https://github.com/excellar-BX" target="_blank" class="social-btn" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
-    <a href="#" class="social-btn" title="Twitter/X"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-    <a href="#" class="social-btn" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-    <a href="https://excellencecom.vercel.app" class="social-btn" target="_blank" title="Portfolio"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+    <a href="https://www.upwork.com/freelancers/~091ea1fc675945dc5f" target="_blank" class="social-btn" title="Upwork"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg></a>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 // ─── CURSOR ───
@@ -1684,6 +1943,88 @@ ScrollTrigger.create({
   onUpdate: (self) => navbar.classList.toggle('scrolled', self.scroll() > 80)
 });
 
+// ─── MOBILE FAB NAV ───
+const fabNav = document.getElementById('fabNav');
+const fabToggle = document.getElementById('fabToggle');
+let fabOpen = false;
+
+function closeFab() {
+  fabOpen = false;
+  fabNav.classList.remove('open');
+}
+
+fabToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  fabOpen = !fabOpen;
+  fabNav.classList.toggle('open', fabOpen);
+});
+
+// Close when clicking outside
+document.addEventListener('click', (e) => {
+  if (fabOpen && !fabNav.contains(e.target)) {
+    closeFab();
+  }
+});
+
+// Draggable FAB
+let isDragging = false;
+let dragStartX, dragStartY, fabStartX, fabStartY;
+let hasMoved = false;
+
+fabToggle.addEventListener('touchstart', (e) => {
+  isDragging = true;
+  hasMoved = false;
+  const touch = e.touches[0];
+  dragStartX = touch.clientX;
+  dragStartY = touch.clientY;
+  const rect = fabNav.getBoundingClientRect();
+  fabStartX = rect.left + rect.width;
+  fabStartY = rect.top + rect.height;
+  fabNav.classList.add('is-dragging');
+}, { passive: true });
+
+document.addEventListener('touchmove', (e) => {
+  if (!isDragging) return;
+  const touch = e.touches[0];
+  const dx = touch.clientX - dragStartX;
+  const dy = touch.clientY - dragStartY;
+
+  if (Math.abs(dx) > 5 || Math.abs(dy) > 5) {
+    hasMoved = true;
+  }
+
+  const newRight = window.innerWidth - (fabStartX + dx);
+  const newBottom = window.innerHeight - (fabStartY + dy);
+
+  // Clamp to viewport
+  const clampedRight = Math.max(8, Math.min(window.innerWidth - 62, newRight));
+  const clampedBottom = Math.max(8, Math.min(window.innerHeight - 62, newBottom));
+
+  fabNav.style.right = clampedRight + 'px';
+  fabNav.style.bottom = clampedBottom + 'px';
+}, { passive: true });
+
+document.addEventListener('touchend', () => {
+  if (isDragging) {
+    isDragging = false;
+    fabNav.classList.remove('is-dragging');
+    // If it was a drag (not tap), prevent the toggle
+    if (hasMoved) {
+      // Don't toggle menu
+    }
+  }
+});
+
+// Override click to check for drag
+fabToggle.addEventListener('click', (e) => {
+  if (hasMoved) {
+    e.stopPropagation();
+    e.preventDefault();
+    hasMoved = false;
+    return;
+  }
+}, true);
+
 // ─── TYPED TEXT ───
 const roles = [
   'Frontend Developer',
@@ -1692,17 +2033,17 @@ const roles = [
   'Founder @ Kexcel Labs',
   'Coding Instructor',
 ];
-let ri = 0, ci = 0, deleting = false;
+let ri = 0, ci2 = 0, deleting = false;
 const typedEl = document.getElementById('typed-text');
 
 function type() {
   const current = roles[ri];
   if (!deleting) {
-    typedEl.textContent = current.slice(0, ++ci);
-    if (ci === current.length) { deleting = true; setTimeout(type, 1800); return; }
+    typedEl.textContent = current.slice(0, ++ci2);
+    if (ci2 === current.length) { deleting = true; setTimeout(type, 1800); return; }
   } else {
-    typedEl.textContent = current.slice(0, --ci);
-    if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; setTimeout(type, 300); return; }
+    typedEl.textContent = current.slice(0, --ci2);
+    if (ci2 === 0) { deleting = false; ri = (ri + 1) % roles.length; setTimeout(type, 300); return; }
   }
   setTimeout(type, deleting ? 40 : 80);
 }
@@ -1812,6 +2153,70 @@ gsap.fromTo('.contact-item', { opacity: 0, x: -20 }, {
 gsap.fromTo('footer', { opacity: 0, y: 20 }, {
   opacity: 1, y: 0, duration: 0.6, ease: 'power2.out',
   scrollTrigger: { trigger: 'footer', start: 'top 95%', once: true }
+});
+
+// ─── CONTACT FORM — EmailJS ───
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+const formSubmitBtn = document.getElementById('formSubmitBtn');
+
+contactForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const fullName = document.getElementById('formName').value.trim();
+  const email = document.getElementById('formEmail').value.trim();
+  const message = document.getElementById('formMessage').value.trim();
+
+  if (!fullName || !email || !message) {
+    formStatus.textContent = 'Please fill in all fields.';
+    formStatus.className = 'form-status error';
+    return;
+  }
+
+  formSubmitBtn.disabled = true;
+  formSubmitBtn.innerHTML = 'Sending... <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';
+
+  const serviceID = "service_xxl639v";
+  const templateID = "template_82zrkfr";
+  const publicKey = "cSFYRidCpUYkuslUe";
+
+  const emailData = {
+    service_id: serviceID,
+    template_id: templateID,
+    user_id: publicKey,
+    template_params: {
+      full_name: fullName,
+      email: email,
+      message: message,
+    },
+  };
+
+  try {
+    const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(emailData),
+    });
+
+    if (response.ok) {
+      formStatus.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+      formStatus.className = 'form-status success';
+      contactForm.reset();
+    } else {
+      throw new Error('Failed to send');
+    }
+  } catch (error) {
+    formStatus.textContent = '✗ Failed to send message. Please try again or email me directly.';
+    formStatus.className = 'form-status error';
+  }
+
+  formSubmitBtn.disabled = false;
+  formSubmitBtn.innerHTML = 'Send message <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';
+
+  // Auto-hide status after 5 seconds
+  setTimeout(() => {
+    formStatus.className = 'form-status';
+  }, 5000);
 });
 </script>
 </body>
