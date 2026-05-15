@@ -10,7 +10,7 @@
 <meta property="og:url" content="https://excellencecom.vercel.app/"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Cabinet+Grotesk:wght@400;500;600;700;800;900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;600;700;800;900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
@@ -36,7 +36,7 @@
   --coral-pale: #FAEAE5;
   --white:      #FDFCF9;
   --serif:      'DM Serif Display', serif;
-  --sans:       'Cabinet Grotesk', sans-serif;
+  --sans:       'Space Grotesk', sans-serif;
   --body:       'Instrument Sans', sans-serif;
   --radius:     16px;
   --radius-sm:  8px;
@@ -196,7 +196,8 @@ nav.stuck .nav-inner { padding-top: 14px; padding-bottom: 14px; }
   left: -40px; top: 30%;
   opacity: 0.6; pointer-events: none;
 }
-.hero-content { position: relative; z-index: 2; }
+.hero-content { position: relative; z-index: 2;
+  width:100%; }
 
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
@@ -274,6 +275,15 @@ nav.stuck .nav-inner { padding-top: 14px; padding-bottom: 14px; }
   padding: 20px 24px;
   max-width: 200px;
   opacity: 0; pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.35s cubic-bezier(0.34,1.56,0.64,1), border-color 0.3s;
+}
+.hero-badge-float.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.hero-badge-float:hover {
+  transform: translateY(-70%) rotate(4deg) translateY(-8px);
+  border-color: var(--amber);
 }
 .hbf-label {
   font-family: var(--sans);
@@ -799,7 +809,7 @@ footer { padding: 40px 0; background: var(--cream); border-top: 1px solid var(--
       <p class="hero-sub">
         From e-commerce stores to mobile marketplaces —
         I turn <strong>ideas into fast, beautiful, working software.</strong>
-        5 years. 20+ projects. Zero excuses.
+        3+ years. 20+ projects. Zero excuses.
       </p>
       <div class="hero-proof">
         <div class="proof-item">
@@ -1121,14 +1131,14 @@ footer { padding: 40px 0; background: var(--cream); border-top: 1px solid var(--
 <section id="proof">
   <div class="container">
     <div class="proof-head reveal">
-      <div class="section-tag" style="justify-content:center;">By the numbers</div>
+      <div class="section-tag" style="justify-content:center;">By the numbers</div> 
       <h2 class="section-title">Results that <em>speak.</em></h2>
     </div>
     <div class="proof-grid">
       <div class="proof-cell stagger-child">
         <div class="proof-cell-num"><span id="pc1">0</span><span style="color:var(--green-mid)">+</span></div>
         <div class="proof-cell-label">Years of experience</div>
-        <div class="proof-cell-sub">Shipping frontend &amp; mobile since 2020</div>
+        <div class="proof-cell-sub">Shipping frontend &amp; mobile since 2023</div>
       </div>
       <div class="proof-cell stagger-child">
         <div class="proof-cell-num"><span id="pc2">0</span><span style="color:var(--green-mid)">+</span></div>
@@ -1388,7 +1398,7 @@ heroTl
   .to('.hero-sub',              { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, 0.85)
   .to('.hero-proof',            { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, 1.0)
   .to('.hero-actions',          { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, 1.1)
-  .to('#heroBadge',             { opacity: 1, duration: 0.8, ease: 'power3.out' },         1.2)
+  .to('#heroBadge',             { opacity: 1, duration: 0.8, ease: 'power3.out', onComplete: () => document.getElementById('heroBadge').classList.add('visible') }, 1.2)
   .to('#scrollHint',            { opacity: 1, duration: 0.6 },                             1.6);
 
 /* ── counter utility ── */
@@ -1402,7 +1412,7 @@ function animCount(el, target, duration) {
   }, 16);
 }
 setTimeout(() => {
-  animCount(document.getElementById('c1'), 5,  1200);
+  animCount(document.getElementById('c1'), 3,  1200);
   animCount(document.getElementById('c2'), 20, 1500);
   animCount(document.getElementById('c3'), 2,  800);
 }, 1400);
@@ -1424,7 +1434,7 @@ document.querySelectorAll('.stagger-child').forEach((el, i) => {
 
 /* ── proof counters ── */
 ['pc1','pc2','pc3'].forEach((id, i) => {
-  const targets = [5, 20, 2];
+  const targets = [3, 20, 2];
   let done = false;
   ScrollTrigger.create({
     trigger: '#proof', start: 'top 80%', once: true,
