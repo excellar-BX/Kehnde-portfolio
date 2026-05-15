@@ -200,17 +200,47 @@ nav.stuck .nav-inner { padding-top: 14px; padding-bottom: 14px; }
   width:100%; }
 
 .hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--sans);
   font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--green-mid);
   margin-bottom: 28px;
-  opacity: 0; transform: translateY(20px);
+  opacity: 0;
+  transform: translateY(20px);
+  flex-wrap: wrap;
+  max-width: 560px;
+  line-height: 1.6;
 }
-.hero-eyebrow::before { content:''; width:28px; height:2px; background:var(--green-mid); border-radius:2px; display:block; }
+.hero-eyebrow::before {
+  content: '';
+  width: 28px; height: 2px;
+  background: var(--green-mid);
+  border-radius: 2px;
+  display: block;
+  flex-shrink: 0;
+  align-self: center;
+}
+.hero-eyebrow strong {
+  color: var(--ink);
+  font-weight: 800;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+  .hero-eyebrow {
+    font-size: 0.68rem;
+    gap: 8px;
+    letter-spacing: 0.03em;
+  }
+  .hero-eyebrow::before { width: 20px; }
+}
 
 .hero-headline {
   font-family: var(--serif);
@@ -761,6 +791,157 @@ footer { padding: 40px 0; background: var(--cream); border-top: 1px solid var(--
   .form-row { grid-template-columns: 1fr; }
   .process-steps { grid-template-columns: 1fr; }
 }
+
+/* ── TESTIMONIALS ── */
+#testimonials { padding: 100px 0; background: var(--cream); }
+.testimonials-head { text-align: center; margin-bottom: 64px; }
+.testimonials-head .section-tag { justify-content: center; }
+
+.testi-slider {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.testi-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/3.6;
+  max-width: 380px;
+  perspective: 1000px;
+}
+.testi-card-stack {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+.testi-card {
+  position: absolute;
+  width: 88%;
+  height: 88%;
+  bottom: 14px;
+  left: 14px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--cream2);
+  transition: transform 0.6s cubic-bezier(0.34,1.56,0.64,1), opacity 0.4s ease;
+  transform-origin: center bottom;
+}
+.testi-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+}
+.testi-card-icon {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+.testi-card-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--green);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.testi-card.active {
+  transform: translateZ(0) rotate(0deg);
+  opacity: 1;
+  z-index: 3;
+  background: var(--green-pale);
+}
+.testi-card.behind {
+  transform: translateZ(-60px) translateY(20px) rotate(-3deg);
+  opacity: 0.5;
+  z-index: 2;
+  background: #D4E8C9;
+}
+.testi-card.back {
+  transform: translateZ(-120px) translateY(40px) rotate(-6deg);
+  opacity: 0.2;
+  z-index: 1;
+  background: #C0D4B5;
+}
+.testi-card.hidden {
+  transform: translateZ(-180px) translateY(60px) rotate(-9deg);
+  opacity: 0;
+  z-index: 0;
+  background: #ACC0A1;
+}
+
+.testi-content { display: flex; flex-direction: column; gap: 20px; }
+.testi-quote-mark {
+  font-family: var(--serif);
+  font-size: 5rem;
+  color: var(--green-light);
+  line-height: 0.6;
+  margin-bottom: 8px;
+  display: block;
+  user-select: none;
+}
+.testi-text {
+  font-family: var(--body);
+  font-size: 1.05rem;
+  color: var(--ink3);
+  line-height: 1.8;
+  min-height: 120px;
+  transition: opacity 0.35s ease;
+}
+.testi-text.fade { opacity: 0; }
+.testi-name {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+.testi-role {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--green-mid);
+  font-weight: 600;
+}
+.testi-nav { display: flex; gap: 10px; margin-top: 8px; }
+.testi-btn {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--green);
+  border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+  transition: background 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+.testi-btn:hover { background: var(--green-mid); transform: translateY(-2px); }
+.testi-btn svg { width: 16px; height: 16px; stroke: white; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.testi-dots { display: flex; gap: 6px; align-items: center; margin-top: 4px; }
+.testi-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--cream3);
+  transition: background 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.testi-dot.active { background: var(--green-mid); transform: scale(1.4); }
+
+@media (max-width: 900px) {
+  .testi-slider { grid-template-columns: 1fr; gap: 40px; }
+  .testi-img-wrap { max-width: 280px; margin: 0 auto; }
+}
 </style>
 </head>
 <body>
@@ -797,7 +978,11 @@ footer { padding: 40px 0; background: var(--cream); border-top: 1px solid var(--
   <div class="hero-shape2"></div>
   <div class="hero-content container">
 
-    <div class="hero-eyebrow">Frontend &amp; Mobile Developer &middot; Lagos, NG</div>
+    <div class="hero-eyebrow">
+  Hey, I'm <strong>Excellence Favours,</strong> Frontend &amp; Mobile Dev &middot; Lagos, NG
+</div>
+
+    
 
     <h1 class="hero-headline">
       <span class="line-wrap"><span class="line-inner">I help businesses</span></span>
@@ -809,7 +994,7 @@ footer { padding: 40px 0; background: var(--cream); border-top: 1px solid var(--
       <p class="hero-sub">
         From e-commerce stores to mobile marketplaces —
         I turn <strong>ideas into fast, beautiful, working software.</strong>
-        3+ years. 20+ projects. Zero excuses.
+        3+ years. 10+ projects. Zero excuses.
       </p>
       <div class="hero-proof">
         <div class="proof-item">
@@ -983,7 +1168,7 @@ footer { padding: 40px 0; background: var(--cream); border-top: 1px solid var(--
     <div class="projects-grid">
 
       <!-- Vendr -->
-      <a href="https://vendr-excellar.vercel.app" target="_blank" class="pc pc--featured pc--vendr stagger-child">
+      <a href="https://vendr-landing.vercel.app" target="_blank" class="pc pc--featured pc--vendr stagger-child">
         <div class="pc-visual">
           <div class="pc-visual-bg"></div>
           <svg class="pc-deco" style="top:24px;right:24px;width:140px;height:140px;" viewBox="0 0 140 140">
@@ -1123,6 +1308,42 @@ footer { padding: 40px 0; background: var(--cream); border-top: 1px solid var(--
         </div>
       </a>
 
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ TESTIMONIALS ════════════ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="testimonials-head reveal">
+      <div class="section-tag" style="justify-content:center;">Client love</div>
+      <h2 class="section-title">What they're <em>saying.</em></h2>
+    </div>
+    <div class="testi-slider reveal">
+      <div class="testi-img-wrap">
+        <div class="testi-card-stack" id="testiCardStack"></div>
+      </div>
+      <div class="testi-content">
+        <span class="testi-quote-mark">"</span>
+        <p class="testi-text" id="testiText">
+         
+        </p>
+        <div>
+          <div class="testi-name" id="testiName"></div>
+          <div class="testi-role" id="testiRole"></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+          <div class="testi-nav">
+            <button class="testi-btn" id="testiBtnPrev" aria-label="Previous">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="testi-btn" id="testiBtnNext" aria-label="Next">
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="testi-dots" id="testiDots"></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1393,7 +1614,7 @@ window.addEventListener('scroll', () => {
 /* ── hero entrance ── */
 const heroTl = gsap.timeline({ delay: 0.15 });
 heroTl
-  .to('.hero-eyebrow',          { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' })
+  .to('.hero-eyebrow', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' })
   .to('.hero-headline .line-inner', { y: '0%', duration: 1, ease: 'expo.out', stagger: 0.13 }, 0.25)
   .to('.hero-sub',              { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, 0.85)
   .to('.hero-proof',            { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, 1.0)
@@ -1413,7 +1634,7 @@ function animCount(el, target, duration) {
 }
 setTimeout(() => {
   animCount(document.getElementById('c1'), 3,  1200);
-  animCount(document.getElementById('c2'), 20, 1500);
+  animCount(document.getElementById('c2'), 10, 1500);
   animCount(document.getElementById('c3'), 2,  800);
 }, 1400);
 
@@ -1434,7 +1655,7 @@ document.querySelectorAll('.stagger-child').forEach((el, i) => {
 
 /* ── proof counters ── */
 ['pc1','pc2','pc3'].forEach((id, i) => {
-  const targets = [3, 20, 2];
+  const targets = [3, 10, 2];
   let done = false;
   ScrollTrigger.create({
     trigger: '#proof', start: 'top 80%', once: true,
@@ -1494,6 +1715,105 @@ contactForm.addEventListener('submit', async e => {
   formBtn.disabled = false;
   setTimeout(() => { formStatus.className = 'form-status'; }, 6000);
 });
+
+/* ── testimonials slider ── */
+const testimonials = [
+  {
+    name: 'Daniel Chinemelum',
+    role: 'Product Lead at FIL Store',
+    text: 'Our e-commerce platform needed serious SEO work and performance optimization. Excellar delivered structured data, dynamic OG metadata, and TikTok Ads integration. Our organic traffic has never been better.',
+    img: ''
+  },
+  {
+    name: 'Charles Isaac',
+    role: 'CTO at Medscan Security Africa',
+    text: 'The regulatory monitoring dashboard Excellar built transformed how we track compliance. Clean code, intuitive UI, and role-based access control exactly as we specified. A true professional.',
+    img: ''
+  },
+  {
+    name: 'Chidi Okonkwo',
+    role: 'Founder at SwiftPay NG',
+    text: 'Excellar built our dashboard in record time. The attention to detail, the speed, the clean code — it was everything we needed. Clients keep complimenting how smooth the experience feels.',
+    img: ''
+  },
+  {
+    name: 'Favours Oluwagbenga',
+    role: 'CEO at Oxyvit',
+    text: 'We needed a conversion-focused landing page for our multivitamin brand. Excellar delivered smooth animations and a design that converts. Sales have been consistently strong since launch.',
+    img: ''
+  },
+];
+
+const testiText  = document.getElementById('testiText');
+const testiName  = document.getElementById('testiName');
+const testiRole  = document.getElementById('testiRole');
+const testiCardStack = document.getElementById('testiCardStack');
+const testiDots  = document.getElementById('testiDots');
+let testiIndex   = 0;
+
+function buildCards() {
+  testiCardStack.innerHTML = '';
+  testimonials.forEach((t, i) => {
+    const card = document.createElement('div');
+    card.className = 'testi-card';
+    card.innerHTML = `
+      <img src="${t.img || `https://placehold.co/400x480/C8DDB5/2D5A27?text=${encodeURIComponent(t.name.split(' ')[0])}`}" alt="${t.name}"/>
+      <div class="testi-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+    `;
+    testiCardStack.appendChild(card);
+  });
+  updateCardPositions();
+}
+
+function updateCardPositions() {
+  const cards = document.querySelectorAll('.testi-card');
+  cards.forEach((card, i) => {
+    card.className = 'testi-card';
+    const offset = (i - testiIndex + testimonials.length) % testimonials.length;
+    if (offset === 0) {
+      card.classList.add('active');
+    } else if (offset === 1) {
+      card.classList.add('behind');
+    } else if (offset === 2) {
+      card.classList.add('back');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+}
+
+function buildDots() {
+  testiDots.innerHTML = '';
+  testimonials.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'testi-dot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => goTo(i));
+    testiDots.appendChild(d);
+  });
+}
+
+function goTo(idx) {
+  testiText.classList.add('fade');
+  testiIndex = (idx + testimonials.length) % testimonials.length;
+  const t = testimonials[testiIndex];
+  testiText.textContent  = t.text;
+  testiName.textContent  = t.name;
+  testiRole.textContent  = t.role;
+  document.querySelectorAll('.testi-dot').forEach((d, i) => d.classList.toggle('active', i === testiIndex));
+  updateCardPositions();
+  setTimeout(() => {
+    testiText.classList.remove('fade');
+  }, 280);
+}
+
+document.getElementById('testiBtnPrev').addEventListener('click', () => goTo(testiIndex - 1));
+document.getElementById('testiBtnNext').addEventListener('click', () => goTo(testiIndex + 1));
+
+buildCards();
+buildDots();
+goTo(0);
 </script>
 </body>
 </html>
